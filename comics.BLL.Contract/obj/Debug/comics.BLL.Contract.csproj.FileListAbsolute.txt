@@ -16,3 +16,12 @@ C:\Users\A\Documents\Visual Studio 2015\Projects\comicsProject_v2\comics.BLL.Con
 C:\Users\A\Documents\Visual Studio 2015\Projects\comicsProject_v2\comics.BLL.Contract\bin\Debug\Newtonsoft.Json.xml
 D:\My documents\visual studio 2015\Projects\comicsProject_v2\comics.BLL.Contract\bin\Debug\Newtonsoft.Json.dll
 D:\My documents\visual studio 2015\Projects\comicsProject_v2\comics.BLL.Contract\bin\Debug\Newtonsoft.Json.xml
+D:\My documents\Visual Studio 2015\Projects\comicsProject_v3\comics.BLL.Contract\bin\Debug\comics.BLL.Contract.dll
+D:\My documents\Visual Studio 2015\Projects\comicsProject_v3\comics.BLL.Contract\bin\Debug\comics.BLL.Contract.pdb
+D:\My documents\Visual Studio 2015\Projects\comicsProject_v3\comics.BLL.Contract\bin\Debug\comics.Entities.dll
+D:\My documents\Visual Studio 2015\Projects\comicsProject_v3\comics.BLL.Contract\bin\Debug\Newtonsoft.Json.dll
+D:\My documents\Visual Studio 2015\Projects\comicsProject_v3\comics.BLL.Contract\bin\Debug\comics.Entities.pdb
+D:\My documents\Visual Studio 2015\Projects\comicsProject_v3\comics.BLL.Contract\bin\Debug\Newtonsoft.Json.xml
+D:\My documents\Visual Studio 2015\Projects\comicsProject_v3\comics.BLL.Contract\obj\Debug\comics.BLL.Contract.csprojResolveAssemblyReference.cache
+D:\My documents\Visual Studio 2015\Projects\comicsProject_v3\comics.BLL.Contract\obj\Debug\comics.BLL.Contract.dll
+D:\My documents\Visual Studio 2015\Projects\comicsProject_v3\comics.BLL.Contract\obj\Debug\comics.BLL.Contract.pdb

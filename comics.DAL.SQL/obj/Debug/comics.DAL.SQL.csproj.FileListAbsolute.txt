@@ -20,3 +20,14 @@ C:\Users\A\Documents\Visual Studio 2015\Projects\comicsProject_v2\comics.DAL.SQL
 C:\Users\A\Documents\Visual Studio 2015\Projects\comicsProject_v2\comics.DAL.SQL\bin\Debug\Newtonsoft.Json.xml
 D:\My documents\visual studio 2015\Projects\comicsProject_v2\comics.DAL.SQL\bin\Debug\Newtonsoft.Json.dll
 D:\My documents\visual studio 2015\Projects\comicsProject_v2\comics.DAL.SQL\bin\Debug\Newtonsoft.Json.xml
+D:\My documents\Visual Studio 2015\Projects\comicsProject_v3\comics.DAL.SQL\bin\Debug\comics.DAL.SQL.dll
+D:\My documents\Visual Studio 2015\Projects\comicsProject_v3\comics.DAL.SQL\bin\Debug\comics.DAL.SQL.pdb
+D:\My documents\Visual Studio 2015\Projects\comicsProject_v3\comics.DAL.SQL\bin\Debug\comics.DAL.Contract.dll
+D:\My documents\Visual Studio 2015\Projects\comicsProject_v3\comics.DAL.SQL\bin\Debug\comics.Entities.dll
+D:\My documents\Visual Studio 2015\Projects\comicsProject_v3\comics.DAL.SQL\bin\Debug\Newtonsoft.Json.dll
+D:\My documents\Visual Studio 2015\Projects\comicsProject_v3\comics.DAL.SQL\bin\Debug\comics.DAL.Contract.pdb
+D:\My documents\Visual Studio 2015\Projects\comicsProject_v3\comics.DAL.SQL\bin\Debug\comics.Entities.pdb
+D:\My documents\Visual Studio 2015\Projects\comicsProject_v3\comics.DAL.SQL\bin\Debug\Newtonsoft.Json.xml
+D:\My documents\Visual Studio 2015\Projects\comicsProject_v3\comics.DAL.SQL\obj\Debug\comics.DAL.SQL.csprojResolveAssemblyReference.cache
+D:\My documents\Visual Studio 2015\Projects\comicsProject_v3\comics.DAL.SQL\obj\Debug\comics.DAL.SQL.dll
+D:\My documents\Visual Studio 2015\Projects\comicsProject_v3\comics.DAL.SQL\obj\Debug\comics.DAL.SQL.pdb

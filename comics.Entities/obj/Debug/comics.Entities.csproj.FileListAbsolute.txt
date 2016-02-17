@@ -12,3 +12,10 @@ C:\Users\A\Documents\Visual Studio 2015\Projects\comicsProject_v2\comics.Entitie
 D:\My documents\visual studio 2015\Projects\comicsProject_v2\comics.Entities\bin\Debug\Newtonsoft.Json.dll
 D:\My documents\visual studio 2015\Projects\comicsProject_v2\comics.Entities\bin\Debug\Newtonsoft.Json.xml
 D:\My documents\visual studio 2015\Projects\comicsProject_v2\comics.Entities\obj\Debug\comics.Entities.csprojResolveAssemblyReference.cache
+D:\My documents\Visual Studio 2015\Projects\comicsProject_v3\comics.Entities\bin\Debug\comics.Entities.dll
+D:\My documents\Visual Studio 2015\Projects\comicsProject_v3\comics.Entities\bin\Debug\comics.Entities.pdb
+D:\My documents\Visual Studio 2015\Projects\comicsProject_v3\comics.Entities\bin\Debug\Newtonsoft.Json.dll
+D:\My documents\Visual Studio 2015\Projects\comicsProject_v3\comics.Entities\bin\Debug\Newtonsoft.Json.xml
+D:\My documents\Visual Studio 2015\Projects\comicsProject_v3\comics.Entities\obj\Debug\comics.Entities.csprojResolveAssemblyReference.cache
+D:\My documents\Visual Studio 2015\Projects\comicsProject_v3\comics.Entities\obj\Debug\comics.Entities.dll
+D:\My documents\Visual Studio 2015\Projects\comicsProject_v3\comics.Entities\obj\Debug\comics.Entities.pdb

@@ -28,3 +28,18 @@ C:\Users\A\Documents\Visual Studio 2015\Projects\comicsProject_v2\comics.BLL.Cor
 C:\Users\A\Documents\Visual Studio 2015\Projects\comicsProject_v2\comics.BLL.Core\bin\Debug\Newtonsoft.Json.xml
 D:\My documents\visual studio 2015\Projects\comicsProject_v2\comics.BLL.Core\bin\Debug\Newtonsoft.Json.dll
 D:\My documents\visual studio 2015\Projects\comicsProject_v2\comics.BLL.Core\bin\Debug\Newtonsoft.Json.xml
+D:\My documents\Visual Studio 2015\Projects\comicsProject_v3\comics.BLL.Core\bin\Debug\comics.BLL.Core.dll
+D:\My documents\Visual Studio 2015\Projects\comicsProject_v3\comics.BLL.Core\bin\Debug\comics.BLL.Core.pdb
+D:\My documents\Visual Studio 2015\Projects\comicsProject_v3\comics.BLL.Core\bin\Debug\comics.BLL.Contract.dll
+D:\My documents\Visual Studio 2015\Projects\comicsProject_v3\comics.BLL.Core\bin\Debug\comics.DAL.Contract.dll
+D:\My documents\Visual Studio 2015\Projects\comicsProject_v3\comics.BLL.Core\bin\Debug\comics.DAL.SQL.dll
+D:\My documents\Visual Studio 2015\Projects\comicsProject_v3\comics.BLL.Core\bin\Debug\comics.Entities.dll
+D:\My documents\Visual Studio 2015\Projects\comicsProject_v3\comics.BLL.Core\bin\Debug\Newtonsoft.Json.dll
+D:\My documents\Visual Studio 2015\Projects\comicsProject_v3\comics.BLL.Core\bin\Debug\comics.BLL.Contract.pdb
+D:\My documents\Visual Studio 2015\Projects\comicsProject_v3\comics.BLL.Core\bin\Debug\comics.DAL.Contract.pdb
+D:\My documents\Visual Studio 2015\Projects\comicsProject_v3\comics.BLL.Core\bin\Debug\comics.DAL.SQL.pdb
+D:\My documents\Visual Studio 2015\Projects\comicsProject_v3\comics.BLL.Core\bin\Debug\comics.Entities.pdb
+D:\My documents\Visual Studio 2015\Projects\comicsProject_v3\comics.BLL.Core\bin\Debug\Newtonsoft.Json.xml
+D:\My documents\Visual Studio 2015\Projects\comicsProject_v3\comics.BLL.Core\obj\Debug\comics.BLL.Core.csprojResolveAssemblyReference.cache
+D:\My documents\Visual Studio 2015\Projects\comicsProject_v3\comics.BLL.Core\obj\Debug\comics.BLL.Core.dll
+D:\My documents\Visual Studio 2015\Projects\comicsProject_v3\comics.BLL.Core\obj\Debug\comics.BLL.Core.pdb
