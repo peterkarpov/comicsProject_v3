@@ -1,0 +1,118 @@
+﻿@using System
+@using comics.PL.WebApp
+@using comics.Entities;
+@{
+    Layout = "~/_Layout.cshtml";
+
+    PageData["Title"] = "show users";
+
+    //start block of Authenticated
+    if (User.Identity.IsAuthenticated & User.IsInRole("admin"))
+    {
+        //
+        
+        if (Request["rating"] != null)
+        {
+            LogicProvider.GetUserLogicForWeb.ChangeRating(Guid.Parse(Request["userId"]), int.Parse(Request["rating"]));
+        }
+
+        if (Request["role"] != null)
+        {
+            var userId = Guid.Parse(Request["userId"]);
+            var role = (string)Request["role"];
+
+            LogicProvider.GetUserLogicForWeb.ChangeRole(userId, role);
+        }
+
+        //
+    }
+    else
+    {
+        Response.Redirect("~/Pages/addUser.cshtml");
+    }
+    //end block of Authenticated
+
+}
+
+<div class="container">
+
+    <div class="panel panel-primary">
+
+        @RenderPage("~/_NavigationPartial.cshtml")
+
+        <div class="panel-heading">
+            <span>show users</span>
+        </div>
+
+        <div class="panel-body">
+
+            <ul class="list-group">
+
+                @foreach (var user in LogicProvider.GetUserLogicForWeb.GetAllUsers().ToList())
+                {
+                    <li class="list-group-item">
+
+
+                        <div class="container-fluid row">
+                            <div class="col-sm-6">
+                                <p class="list-group-item-text"><b>@user.Name</b></p>
+                                <p class="list-group-item-text">role: @user.ARole</p>
+                                @*<p class="list-group-item-text">role: @user.ARole.ToString().Substring(user.ARole.ToString().LastIndexOf(' '))</p>*@
+                                
+                                <p class="list-group-item-text">rating: @user.Rating</p>
+                                <p class="list-group-item-text">@user.Email</p>
+                            </div>
+
+                            <div class="col-sm-6">
+
+                                <form method="post" action="" class="pull-right">
+
+                                    <input type="hidden" name="userId" value="@user.Id" />
+
+                                    <select name="role" onChange="this.form.submit()" class="form-control-static">
+
+                                        <option disabled selected="selected">change role:</option>
+
+                                        <option value="none">none</option>
+                                        <option value="user">user</option>
+                                        <option value="moderator">moderator</option>
+                                        <option value="admin">admin</option>
+
+                                    </select>
+                                </form>
+                                <form method="post" action="" class="pull-right">
+
+                                    <input type="hidden" name="userId" value="@user.Id" />
+
+                                    <select name="rating" onChange="this.form.submit()" class="form-control-static" style="margin-right:10px">
+
+                                        <option disabled selected="selected">change rating:</option>
+
+                                        <option value="@(user.Rating - 2)">@(user.Rating - 2)</option>
+                                        <option value="@(user.Rating - 1)">@(user.Rating - 1)</option>
+                                        <option style="border:1px dotted grey" value="@user.Rating">@user.Rating</option>
+                                        <option value="@(user.Rating + 1)">@(user.Rating + 1)</option>
+                                        <option value="@(user.Rating + 2)">@(user.Rating + 2)</option>
+
+                                    </select>
+                                </form>
+
+                                <form method="get" action="~/Pages/editUser.cshtml" class="pull-right">
+
+                                    <input type="hidden" name="userId" value="@user.Id" />
+                                    <button class="btn btn-default" style="margin-right:10px">Edit Profile</button>
+
+                                </form>
+
+                            </div>
+
+                        </div>
+
+                    </li>
+                }
+
+
+            </ul>
+        </div>
+    </div>
+</div>

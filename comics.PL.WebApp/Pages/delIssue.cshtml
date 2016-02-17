@@ -1,0 +1,37 @@
+﻿@using System
+@using comics.PL.WebApp
+@{
+
+    //start block of Authenticated
+    if (User.Identity.IsAuthenticated & User.IsInRole("admin"))
+    {
+        //
+
+        if (!IsPost)
+        {
+            Guid issueId = Guid.Parse(Request["issueId"]);
+
+            var arrComments = LogicProvider.GetCommentLogicForWeb.GetAllForIssue(issueId).ToArray();
+            if (arrComments.Count() > 0)
+            {
+                foreach (var comment in arrComments)
+                {
+                    LogicProvider.GetCommentLogicForWeb.Delete(comment.Id);
+                }
+            }
+
+            LogicProvider.GetPageLogicForWeb.DeleteAllPagesOnIssue(issueId);
+            LogicProvider.GetIssueLogicForWeb.Delete(issueId);
+            
+            Response.Redirect("~/Pages/showIssues.cshtml");
+        }
+
+        //
+    }
+    else
+    {
+        Response.Redirect("~/Pages/addUser.cshtml");
+    }
+    //end block of Authenticated
+
+}

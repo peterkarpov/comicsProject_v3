@@ -1,0 +1,108 @@
+﻿@using System
+@using comics.PL.WebApp
+@using comics.Entities;
+@{
+    Layout = "~/_Layout.cshtml";
+
+    PageData["Title"] = "registration";
+
+    string errorMessage = null;
+
+    if (!IsPost)
+    {
+        if (Request["errorCode"] == "noRole")
+        {
+            errorMessage = "you need to hight role to visit this page or more login";
+        }
+    }
+
+    if (IsPost)
+    {
+        var newUser = new User
+        {
+            Name = Request["login"],
+
+            Email = Request["email"],
+
+        };
+
+        if (Request["password"] == Request["confirmPassword"])
+        {
+
+
+            if (LogicProvider.GetUserLogicForWeb.Add(newUser))
+            {
+                if (LogicProvider.GetAutificationLogicForWeb.Registration(Request["login"], Request["password"]))
+                {
+                    Response.Redirect("~/Pages/showIssues.cshtml");
+                }
+            }
+            else
+            {
+                errorMessage = "your passwords is not confirm";
+            }
+            
+        }
+        else
+        {
+            errorMessage = "your passwords is not confirm";
+        }
+
+    }
+
+}
+
+<div class="container">
+
+    <div class="panel panel-primary">
+
+        @RenderPage("~/_NavigationPartial.cshtml")
+
+        <div class="panel-heading">
+            <span>registration</span>
+        </div>
+
+        <div class="panel-body">
+
+            <div class="container-fluid row">
+                <div class="col-sm-6 col-sm-offset-3">
+
+                    <form role="form" method="post" action="" name="Registration">
+                        <div class="form-group forEmail">
+                            <label for="email">Email:</label>
+                            <input id="email" type="text" name="email" placeholder="your correct email" class="form-control" onkeyup="confirmEmail()">
+                        </div>
+                        <div class="form-group">
+                            <label for="login">Login:</label>
+                            <input id="login" type="text" name="login" placeholder="also your name" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label for="password">Password:</label>
+                            <input id="password" type="password" name="password" placeholder="password" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label for="confirmPassword">Confirm password:</label>
+                            <input id="confirmPassword" type="password" class="form-control" name="confirmPassword" placeholder="yes, enter your password a second time">
+                        </div>
+
+                        @if (errorMessage != null)
+                        {
+                            <div class="alert alert-danger">@errorMessage</div>
+                        }
+
+                        <button disabled type="submit" class="btn btn-primary center-block registration">Registration</button>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+
+    $.getScript('~/Scripts/forEmail.js', function () {
+        alert('script loaded');
+    });
+
+</script>

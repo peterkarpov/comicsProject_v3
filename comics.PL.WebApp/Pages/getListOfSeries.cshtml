@@ -1,0 +1,8 @@
+﻿@using comics.PL.WebApp
+@using Newtonsoft.Json;
+@{
+    if (IsAjax)
+    {
+        Response.Write(JsonConvert.SerializeObject(LogicProvider.GetIssueLogicForWeb.GetListOfSeries()));
+    }
+}

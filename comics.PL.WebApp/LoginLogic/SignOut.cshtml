@@ -1,0 +1,7 @@
+﻿@{
+    FormsAuthentication.SignOut();
+
+    Response.Redirect(Request["ReturnUrl"] ?? "/");
+
+
+}

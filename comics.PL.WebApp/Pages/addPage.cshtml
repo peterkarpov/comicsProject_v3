@@ -1,0 +1,69 @@
+﻿@using System
+@using comics.PL.WebApp
+@using comics.Entities;
+@{
+    Layout = "~/_Layout.cshtml";
+
+    PageData["Title"] = "add page";
+
+    Guid issueId = default(Guid);
+
+
+    if (Request["issueId"] != null)
+    {
+        issueId = Guid.Parse(Request["issueId"]);
+    }
+
+    Issue issue = LogicProvider.GetIssueLogicForWeb.GetIssueById(issueId);
+
+
+    if (IsPost)
+    {
+        for (int i = 0; i < Request.Files.Count; i++)
+        {
+            var file = this.Request.Files[i] as HttpPostedFileBase;
+
+            byte[] imgbyte = new byte[file.ContentLength];
+            file.InputStream.Read(imgbyte, 0, imgbyte.Length);
+
+            var MIME = file.ContentType;
+            var img = imgbyte;
+            var fileName = file.FileName;
+            
+            var page = new comics.Entities.Page { fileName = fileName, img = img, MIME = MIME, IssueId = issueId };
+
+            if (!LogicProvider.GetPageLogicForWeb.Add(page)) { break; };
+        }
+
+        Response.Redirect("~/Pages/showIssues.cshtml");
+        
+    }
+}
+
+<div class="container">
+
+    <div class="panel panel-primary">
+
+        @RenderPage("~/_NavigationPartial.cshtml")
+
+        <div class="panel-heading">
+            <span>add page for @issue.Series - @issue.Volume - @issue.IssueName</span>
+        </div>
+
+        <div class="panel-body">
+
+            <form enctype="multipart/form-data" method="post" action="">
+
+                <input type="file" name="page" multiple accept="image/jpeg" class="center-block" />
+
+                <br />
+
+                <button type="submit" class="btn btn-primary center-block" data-loading-text="Загрузка…">Загрузить</button>
+
+                <input type="hidden" name="issueId" id="issueId" value="@(issueId)" />
+
+            </form>
+
+        </div>
+    </div>
+</div>

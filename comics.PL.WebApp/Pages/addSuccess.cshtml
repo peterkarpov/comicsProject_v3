@@ -1,0 +1,72 @@
+﻿@using System
+@using comics.PL.WebApp
+@using comics.Entities;
+@{
+    Layout = "~/_Layout.cshtml";
+
+    PageData["Title"] = "add success";
+
+    string errorMessage = null;
+
+    //start block of Authenticated
+    if (!User.Identity.IsAuthenticated | !User.IsInRole("admin"))
+    {
+        Response.Redirect("~/Pages/addUser.cshtml");
+    }
+    //end block of Authenticated
+    
+    if (IsPost)
+    {
+        var newSuccess = new Success
+        {
+            SuccessDiscription = Request["Discription"],
+            CreationTime = DateTime.Now,
+            CuratorId = LogicProvider.GetUserLogicForWeb.GetUserByName(User.Identity.Name).Id,
+
+        };
+
+        if (LogicProvider.GetSuccessLogicForWeb.CreateSuccess(newSuccess))
+        {
+            Response.Redirect("~/Pages/showSuccess.cshtml");
+        }
+        else
+        {
+            errorMessage = "you can't create success with empty discription";
+        }
+    }
+}
+ 
+<div class="container">
+
+    <div class="panel panel-primary">
+
+        @RenderPage("~/_NavigationPartial.cshtml")
+
+        <div class="panel-heading">
+            <span>add success</span>
+        </div>
+
+        <div class="panel-body">
+
+            <div class="container-fluid row">
+                <div class="col-sm-8 col-sm-offset-2">
+
+                    <form role="form" method="post" action="">
+                        <div class="form-group">
+                            <label for="exampleInputSuccessDiscription">discription:</label>
+                            <textarea style="resize:vertical" type="text" name="Discription" value="" class="form-control" rows="8"></textarea>
+                        </div>
+
+                        @if (errorMessage != null)
+                        {
+                            <div class="alert alert-danger">@errorMessage</div>
+                        }
+
+                        <button type="submit" class="btn btn-primary center-block">Create New Success</button>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,32 @@
+﻿@{
+    Layout = "~/_Layout.cshtml";
+
+    PageData["Title"] = "Index page";
+
+}
+
+<div class="container">
+
+    <div class="panel panel-primary">
+
+        @RenderPage("~/_NavigationPartial.cshtml")
+
+        <div class="panel-heading">
+            <span>index page</span>
+        </div>
+
+        <div class="panel-body text-center">
+
+            <h1>Welcome!</h1>
+            <p>to my comics viewer site</p>
+
+            <h3>We can...</h3>
+            <p>view the issue, and if you register, you can add own comments</p>
+
+            <p>if you want to be our moderator, you can add new page and add own issue</p>
+
+            <p>also you can view success and subscribe to them</p>
+
+        </div>
+    </div>
+</div>

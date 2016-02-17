@@ -1,0 +1,38 @@
+﻿@{
+    Layout = null;
+
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@PageData["Title"]</title>
+
+    <link href="~/Content/bootstrap.css" rel="stylesheet" />
+    @*<link href="~/Content/bootstrap.min.css" rel="stylesheet" />*@
+    <link href="~/styles.css" rel="stylesheet" />
+
+</head>
+<body>
+
+    <script src="~/Scripts/bootstrap.min.js"></script>
+    @*<script src="~/Scripts/bootstrap.js"></script>*@
+    <script src="~/Scripts/jquery-1.9.1.min.js"></script>
+    @*<script src="~/Scripts/jquery-1.9.1.js"></script>*@
+
+    @RenderPage("_HeaderPartial.cshtml")
+
+    @RenderBody()
+
+    @RenderPage("_FooterPartial.cshtml")
+
+    <script src="~/Scripts/bootstrap.min.js"></script>
+    @*<script src="~/Scripts/bootstrap.js"></script>*@
+    <script src="~/Scripts/jquery-1.9.1.min.js"></script>
+    @*<script src="~/Scripts/jquery-1.9.1.js"></script>*@
+
+
+</body>
+</html>

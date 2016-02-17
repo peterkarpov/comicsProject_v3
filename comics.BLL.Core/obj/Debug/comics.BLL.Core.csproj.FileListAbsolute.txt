@@ -1,0 +1,30 @@
+d:\my documents\visual studio 2015\Projects\comicsProject_v2\comics.BLL.Core\obj\Debug\comics.BLL.Core.csprojResolveAssemblyReference.cache
+d:\my documents\visual studio 2015\Projects\comicsProject_v2\comics.BLL.Core\bin\Debug\comics.BLL.Core.dll
+d:\my documents\visual studio 2015\Projects\comicsProject_v2\comics.BLL.Core\bin\Debug\comics.BLL.Core.pdb
+d:\my documents\visual studio 2015\Projects\comicsProject_v2\comics.BLL.Core\bin\Debug\comics.BLL.Contract.dll
+d:\my documents\visual studio 2015\Projects\comicsProject_v2\comics.BLL.Core\bin\Debug\comics.DAL.Contract.dll
+d:\my documents\visual studio 2015\Projects\comicsProject_v2\comics.BLL.Core\bin\Debug\comics.DAL.SQL.dll
+d:\my documents\visual studio 2015\Projects\comicsProject_v2\comics.BLL.Core\bin\Debug\comics.Entities.dll
+d:\my documents\visual studio 2015\Projects\comicsProject_v2\comics.BLL.Core\bin\Debug\comics.BLL.Contract.pdb
+d:\my documents\visual studio 2015\Projects\comicsProject_v2\comics.BLL.Core\bin\Debug\comics.DAL.Contract.pdb
+d:\my documents\visual studio 2015\Projects\comicsProject_v2\comics.BLL.Core\bin\Debug\comics.DAL.SQL.pdb
+d:\my documents\visual studio 2015\Projects\comicsProject_v2\comics.BLL.Core\bin\Debug\comics.Entities.pdb
+d:\my documents\visual studio 2015\Projects\comicsProject_v2\comics.BLL.Core\obj\Debug\comics.BLL.Core.dll
+d:\my documents\visual studio 2015\Projects\comicsProject_v2\comics.BLL.Core\obj\Debug\comics.BLL.Core.pdb
+C:\Users\A\Documents\Visual Studio 2015\Projects\comicsProject_v2\comics.BLL.Core\bin\Debug\comics.BLL.Core.dll
+C:\Users\A\Documents\Visual Studio 2015\Projects\comicsProject_v2\comics.BLL.Core\bin\Debug\comics.BLL.Core.pdb
+C:\Users\A\Documents\Visual Studio 2015\Projects\comicsProject_v2\comics.BLL.Core\bin\Debug\comics.BLL.Contract.dll
+C:\Users\A\Documents\Visual Studio 2015\Projects\comicsProject_v2\comics.BLL.Core\bin\Debug\comics.DAL.Contract.dll
+C:\Users\A\Documents\Visual Studio 2015\Projects\comicsProject_v2\comics.BLL.Core\bin\Debug\comics.DAL.SQL.dll
+C:\Users\A\Documents\Visual Studio 2015\Projects\comicsProject_v2\comics.BLL.Core\bin\Debug\comics.Entities.dll
+C:\Users\A\Documents\Visual Studio 2015\Projects\comicsProject_v2\comics.BLL.Core\bin\Debug\comics.BLL.Contract.pdb
+C:\Users\A\Documents\Visual Studio 2015\Projects\comicsProject_v2\comics.BLL.Core\bin\Debug\comics.DAL.Contract.pdb
+C:\Users\A\Documents\Visual Studio 2015\Projects\comicsProject_v2\comics.BLL.Core\bin\Debug\comics.DAL.SQL.pdb
+C:\Users\A\Documents\Visual Studio 2015\Projects\comicsProject_v2\comics.BLL.Core\bin\Debug\comics.Entities.pdb
+C:\Users\A\Documents\Visual Studio 2015\Projects\comicsProject_v2\comics.BLL.Core\obj\Debug\comics.BLL.Core.csprojResolveAssemblyReference.cache
+C:\Users\A\Documents\Visual Studio 2015\Projects\comicsProject_v2\comics.BLL.Core\obj\Debug\comics.BLL.Core.dll
+C:\Users\A\Documents\Visual Studio 2015\Projects\comicsProject_v2\comics.BLL.Core\obj\Debug\comics.BLL.Core.pdb
+C:\Users\A\Documents\Visual Studio 2015\Projects\comicsProject_v2\comics.BLL.Core\bin\Debug\Newtonsoft.Json.dll
+C:\Users\A\Documents\Visual Studio 2015\Projects\comicsProject_v2\comics.BLL.Core\bin\Debug\Newtonsoft.Json.xml
+D:\My documents\visual studio 2015\Projects\comicsProject_v2\comics.BLL.Core\bin\Debug\Newtonsoft.Json.dll
+D:\My documents\visual studio 2015\Projects\comicsProject_v2\comics.BLL.Core\bin\Debug\Newtonsoft.Json.xml

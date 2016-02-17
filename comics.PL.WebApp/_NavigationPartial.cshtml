@@ -1,0 +1,24 @@
+﻿<div>
+    <ul class="nav nav-pills nav-justified">
+
+        <li><a href="~/Pages/showIssues.cshtml">Show Issues</a></li>
+        <li><a href="~/Pages/addUser.cshtml">Registration</a></li>
+
+        @if (User.Identity.IsAuthenticated)
+            {
+                if (User.IsInRole("moderator"))
+                {
+                    <li><a href="~/Pages/addIssue.cshtml">Add Issue</a></li>
+
+                    <li><a href="~/Pages/showSuccess.cshtml">Show Success</a></li>
+            }
+            if (User.IsInRole("admin"))
+            {
+                <li><a href="~/Pages/addSuccess.cshtml">Create Success</a></li>
+                <li><a href="~/Pages/showUsers.cshtml">Show Users</a></li>
+
+            }
+        }
+
+    </ul>
+</div>

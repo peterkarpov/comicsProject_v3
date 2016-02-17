@@ -1,0 +1,81 @@
+﻿@using comics.PL.WebApp.Models
+@{
+    string errorMessage = null;
+
+    string login = null;
+
+    Layout = "~/_Layout.cshtml";
+
+    if (IsPost)
+    {
+        login = Request["login"];
+        var password = Request["password"];
+
+        if (Auth.CanLogin(login, password))
+        {
+            FormsAuthentication.SetAuthCookie(login, createPersistentCookie: true);
+
+            Response.Redirect(Request["ReturnUrl"] ?? "/");
+            return;
+        }
+        else
+        {
+            errorMessage = "Wrong user name or password";
+        }
+    }
+
+}
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <meta charset="utf-8" />
+</head>
+<body>
+
+    <div class="container loginbox">
+
+        <div class="panel panel-primary">
+
+            @RenderPage("~/_NavigationPartial.cshtml")
+
+            <div class="panel-heading">
+                <span>enter your login and password</span>
+            </div>
+
+            <div class="panel-body">
+
+                <div class="container-fluid row">
+                    <div class="col-sm-6 col-sm-offset-3">
+                                                
+                        <form role="form" method="post">
+                            <div class="form-group">
+                                <label for="login">Login:</label>
+                                <input id="login" type="text" name="login" value="@login" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label for="password">Password:</label>
+                                <input id="password" type="password" class="form-control" name="password">
+                            </div>
+                        
+                            @if (errorMessage != null)
+                            {
+                                <div class="alert alert-danger">@errorMessage</div>
+                            }    
+
+                            <button type="submit" class="btn btn-default center-block">Sign In</button>
+                        </form>
+
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

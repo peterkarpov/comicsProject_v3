@@ -1,0 +1,25 @@
+﻿@using System
+@using comics.PL.WebApp
+@{
+
+    //start block of Authenticated
+    if (!User.Identity.IsAuthenticated | !User.IsInRole("admin"))
+    {
+        Response.Redirect("~/Pages/addUser.cshtml");
+    }
+
+    if (!IsPost)
+    {
+        Guid issueId = Guid.Parse(Request["issueId"]);
+        int number = Int32.Parse(Request["number"]);
+
+        comics.Entities.Page page = LogicProvider.GetPageLogicForWeb.GetOnePagesOnIssue(issueId, number);
+
+        if (LogicProvider.GetPageLogicForWeb.Delete(page.Id))
+        {
+            Response.Redirect("~/Pages/showPage.cshtml?&issueId=" + issueId + "&number=" + (number - 1) + "#thisPage");
+        }
+
+        Response.Redirect("~/Pages/showPage.cshtml?&issueId=" + issueId + "&number=" + number + "#thisPage");
+    }
+}

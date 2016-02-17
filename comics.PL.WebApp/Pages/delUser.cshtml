@@ -1,0 +1,30 @@
+﻿@using System
+@using comics.PL.WebApp
+@using comics.Entities
+@{
+
+    //start block of Authenticated
+    if (!User.Identity.IsAuthenticated | !User.IsInRole("admin"))
+    {
+        Response.Redirect("~/Pages/addUser.cshtml");
+    }
+    //end block of Authenticated
+
+    Guid userId = default(Guid);
+
+    if (IsPost)
+    {
+        userId = Guid.Parse(Request["userId"]);
+
+        foreach (var success in LogicProvider.GetSuccessLogicForWeb.GetAllSuccessOnPerformer(userId))
+        {
+            LogicProvider.GetSuccessLogicForWeb.SetPerformer(success.Id, default(Guid));
+        }
+
+        LogicProvider.GetAutificationLogicForWeb.Delete(LogicProvider.GetUserLogicForWeb.GetUserById(userId).Name);
+        LogicProvider.GetUserLogicForWeb.Delete(userId);
+
+        Response.Redirect("~/Pages/showUsers.cshtml");
+    }
+
+}

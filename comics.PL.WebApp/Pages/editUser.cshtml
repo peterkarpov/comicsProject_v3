@@ -1,0 +1,377 @@
+﻿@using System
+@using comics.PL.WebApp
+@using comics.Entities;
+@{
+    Layout = "~/_Layout.cshtml";
+
+    PageData["Title"] = "edit user";
+
+    ////start block of Authenticated
+    //if (!User.Identity.IsAuthenticated | !User.IsInRole("admin"))
+    //{
+    //    Response.Redirect("~/Pages/addUser.cshtml?errorCode=noRole");
+    //}
+    ////end block of Authenticated
+
+    string errorMessage = null;
+    User user = default(User);
+
+    if (Request["userId"] != null)
+    {
+        user = LogicProvider.GetUserLogicForWeb.GetUserById(Guid.Parse(Request["userId"]));
+        if ((User.Identity.Name != user.Name) & (User.Identity.Name != "admin"))
+        {
+            Response.Redirect("~/Pages/addUser.cshtml?errorCode=noRole");
+        }
+    }
+
+    if (Request["errorCode"] != null)
+    {
+        if (Request["errorCode"] == "noRole")
+        {
+            errorMessage = "you need to hight role to visit this page or more login";
+        }
+    }
+
+    if (IsPost)
+    {
+        var newUserForEdit = new User
+        {
+            Name = Request["login"],
+
+            Email = Request["email"],
+
+        };
+
+        if (Request["password"] == Request["confirmPassword"])
+        {
+            
+            //if (LogicProvider.GetUserLogicForWeb.Add(newUserForEdit) & LogicProvider.GetAutificationLogicForWeb.Registration(Request["login"], Request["password"]))
+            if (LogicProvider.GetUserLogicForWeb.Edit(user.Id, newUserForEdit) & LogicProvider.GetAutificationLogicForWeb.Edit(user.Name, Request["login"], Request["password"]))
+            {
+                Response.Redirect("~/Pages/showIssues.cshtml");
+            }
+            else
+            {
+                errorMessage = "failed to registration";
+            }
+        }
+        else
+        {
+            errorMessage = "your passwords is not confirm";
+        }
+
+    }
+
+}
+
+<div class="container">
+
+    <div class="panel panel-primary">
+
+        @RenderPage("~/_NavigationPartial.cshtml")
+
+        <div class="panel-heading">
+            <span>edit user</span>
+        </div>
+
+        <div class="panel-body">
+
+            <h4>Information of @user.Name:</h4>
+
+            <div class="container-fluid row">
+                <div class="col-sm-6 col-sm-offset-3">
+
+                    <form role="form" method="post" action="" name="Registration">
+                        <div class="form-group forEmail">
+                            <label for="email">Email:</label>
+                            <input id="email" type="text" name="email" value="@(user.Email ?? "none")" class="form-control" onkeyup="confirmEmail()">
+                        </div>
+                        <div class="form-group">
+                            <label for="login">Login:</label>
+                            <input id="login" type="text" name="login" value="@user.Name" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label for="password">Password:</label>
+                            <input id="password" type="password" name="password" placeholder="password" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label for="confirmPassword">Confirm password:</label>
+                            <input id="confirmPassword" type="password" class="form-control" name="confirmPassword" placeholder="yes, enter your password a second time">
+                        </div>
+
+                        @if (errorMessage != null)
+                        {
+                            <div class="alert alert-danger">@errorMessage</div>
+                        }
+
+                        <button disabled type="submit" class="btn btn-primary center-block registration">Edit User</button>
+                    </form>
+
+                    <form method="post" action="~/Pages/delUser.cshtml" style="position:absolute;right:8px;top:-25px;">
+                        <input type="hidden" name="userId" value="@(user.Id)" />
+                        <button type="submit" class="btn btn-danger">Delete User</button>
+                    </form>
+
+
+
+
+                </div>
+            </div>
+        </div>
+
+        <div class="panel-footer">
+
+            @if (LogicProvider.GetCommentLogicForWeb.GetAllForUser(user.Id).ToList().Count != 0)
+            {
+            <h4>Comments of @user.Name: </h4>
+
+            <ul class="list-group">
+
+                @foreach (var comment in LogicProvider.GetCommentLogicForWeb.GetAllForUser(user.Id).ToList())
+                {
+                    <li class="list-group-item">
+
+                        @if (LogicProvider.GetUserLogicForWeb.ExistUser(comment.AuthorID))
+                        {
+                            <div>
+                                <b>@LogicProvider.GetUserLogicForWeb.GetUserById(comment.AuthorID).Name</b>
+
+                                @if (LogicProvider.GetIssueLogicForWeb.ExistIssue(comment.IssueID))
+                                {
+                                    Issue issue = LogicProvider.GetIssueLogicForWeb.GetIssueById(comment.IssueID);
+                                    <text>
+                                        for
+                                        <a href="~/Pages/showOneIssue.cshtml?issueId=@issue.Id">
+                                            @issue.Series -
+                                            @issue.Volume -
+                                            @issue.IssueName
+                                        </a>
+                                    </text>
+                                }
+                                else
+                                {
+                                    <text> deleted issue</text>
+                                }
+                            </div>
+
+                        }
+                        else
+                        {
+                            <div><b>User has been deleted own profile...</b></div>
+                        }
+                        <span>@comment.Text</span>
+                        <div><i>@(String.Format("{0:F}", comment.CreationTime))</i></div>
+
+                        <form method="post" action="~/Pages/delComment.cshtml" style="position:absolute;top:10px; right:10px;">
+                            <input type="hidden" name="commentId" value="@comment.Id" />
+                            <button type="submit" class="btn btn-danger btn-xs">Delete This Comment</button>
+                        </form>
+
+
+                    </li>
+                }
+            </ul>
+            }
+
+
+            @*<div class="panel-group" id="accordion">
+                @foreach (var comment in LogicProvider.GetCommentLogicForWeb.GetAllForUser(user.Id).ToList())
+                {
+
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                                <a data-toggle="collapse" data-parent="#accordion" href="#@comment.Id" style="outline:none">
+                                    <div><i>@(String.Format("{0:F}", comment.CreationTime))</i></div>
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="@comment.Id" class="panel-collapse collapse">
+                            <div class="panel-body">
+                                <span>@comment.Text</span>
+
+
+                                @if (LogicProvider.GetUserLogicForWeb.ExistUser(comment.AuthorID))
+                                {
+                                    <div>
+                                        @if (LogicProvider.GetIssueLogicForWeb.ExistIssue(comment.IssueID))
+                                        {
+                                            Issue issue = LogicProvider.GetIssueLogicForWeb.GetIssueById(comment.IssueID);
+                                            <text>
+                                                for
+                                                <a href="~/Pages/showOneIssue.cshtml?issueId=@issue.Id">
+                                                    @issue.Series -
+                                                    @issue.Volume -
+                                                    @issue.IssueName
+                                                </a>
+                                            </text>
+                                        }
+                                        else
+                                        {
+                                            <text> deleted issue</text>
+                                        }
+                                    </div>
+
+                                }
+                                else
+                                {
+                                    <div><b>User has been deleted own profile...</b></div>
+                                }
+
+                            </div>
+                        </div>
+                    </div>
+                }
+            </div>*@
+
+            @if (LogicProvider.GetSuccessLogicForWeb.GetAllSuccessOnCurator(user.Id).ToList().Count != 0)
+            {
+            <h4>Success of @user.Name, where his been Curator: </h4>
+
+            @*<ul class="list-group">
+
+                    @foreach (var success in LogicProvider.GetSuccessLogicForWeb.GetAllSuccessOnCurator(user.Id).ToList())
+                    {
+                        <li class="list-group-item
+                            @if (success.Status == "checked") { <text>list-group-item-success</text> }
+                            @if (success.Status == "inProgress") { <text>list-group-item-info</text> }
+                            ">
+
+                            <div class="aboutSuccess">
+                                <p class="list-group-item-text">curator: @LogicProvider.GetUserLogicForWeb.GetUserById(success.CuratorId).Name</p>
+                                <p class="list-group-item-text"><i>@success.CreationTime</i></p>
+                                <p class="list-group-item-heading">@success.SuccessDiscription</p>
+                                <p class="list-group-item-text">status: <b>@success.Status</b></p>
+
+                                @if (success.PerformerId != default(Guid))
+                                {
+                                    <p class="list-group-item-text">performer: @LogicProvider.GetUserLogicForWeb.GetUserById(success.PerformerId).Name</p>
+                                }
+
+                            </div>
+
+                        </li>
+                    }
+
+                </ul>*@
+
+            <div class="panel-group" id="accordion">
+
+                @foreach (var success in LogicProvider.GetSuccessLogicForWeb.GetAllSuccessOnCurator(user.Id).ToList())
+                {
+
+                    <div class="panel panel-default
+                        @if (success.Status == "checked")
+                        { <text>panel-success</text> }
+                        @if (success.Status == "inProgress")
+                        { <text>panel-info</text> }
+                        ">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                                <a data-toggle="collapse" data-parent="#accordion" href="#@success.Id-andCurator-@success.CuratorId" style="outline:none">
+                                    <p class="list-group-item-text">curator: @LogicProvider.GetUserLogicForWeb.GetUserById(success.CuratorId).Name</p>
+                                    <p class="list-group-item-text"><i>@success.CreationTime</i></p>
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="@success.Id-andCurator-@success.CuratorId" class="panel-collapse collapse">
+                            <div class="panel-body">
+                                <p>@success.SuccessDiscription</p>
+                                <p>status: <b>@success.Status</b></p>
+                                @if (success.PerformerId != default(Guid))
+                                {
+                                    <p>performer: @LogicProvider.GetUserLogicForWeb.GetUserById(success.PerformerId).Name</p>
+                                }
+                            </div>
+                        </div>
+                    </div>
+                }
+
+            </div>
+            }
+
+            @if (LogicProvider.GetSuccessLogicForWeb.GetAllSuccessOnPerformer(user.Id).ToList().Count != 0)
+            {
+            <h4>Success of @user.Name, where his been Performer: </h4>
+
+            @*<ul class="list-group">
+
+                    @foreach (var success in LogicProvider.GetSuccessLogicForWeb.GetAllSuccessOnPerformer(user.Id).ToList())
+                    {
+                        <li class="list-group-item
+                            @if (success.Status == "checked") { <text>list-group-item-success</text> }
+                            @if (success.Status == "inProgress") { <text>list-group-item-info</text> }
+                            ">
+
+                            <div class="aboutSuccess">
+                                <p class="list-group-item-text">curator: @LogicProvider.GetUserLogicForWeb.GetUserById(success.CuratorId).Name</p>
+                                <p class="list-group-item-text"><i>@success.CreationTime</i></p>
+                                <p class="list-group-item-heading">@success.SuccessDiscription</p>
+                                <p class="list-group-item-text">status: <b>@success.Status</b></p>
+
+                                @if (success.PerformerId != default(Guid))
+                                {
+                                    <p class="list-group-item-text">performer: @LogicProvider.GetUserLogicForWeb.GetUserById(success.PerformerId).Name</p>
+                                }
+
+                            </div>
+
+                        </li>
+                    }
+
+                </ul>*@
+
+
+
+            <div class="panel-group" id="accordion">
+                @foreach (var success in LogicProvider.GetSuccessLogicForWeb.GetAllSuccessOnPerformer(user.Id).ToList())
+                {
+
+                    <div class="panel panel-default
+                        @if (success.Status == "checked")
+                        { <text>panel-success</text> }
+                        @if (success.Status == "inProgress")
+                        { <text>panel-info</text> }
+                        ">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                                <a data-toggle="collapse" data-parent="#accordion" href="#@success.Id-andPerformer-@success.PerformerId" style="outline:none">
+                                    <p class="list-group-item-text">curator: @LogicProvider.GetUserLogicForWeb.GetUserById(success.CuratorId).Name</p>
+                                    <p class="list-group-item-text"><i>@success.CreationTime</i></p>
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="@success.Id-andPerformer-@success.PerformerId" class="panel-collapse collapse">
+                            <div class="panel-body">
+                                <p>@success.SuccessDiscription</p>
+                                <p>status: <b>@success.Status</b></p>
+                                @if (success.PerformerId != default(Guid))
+                                {
+                                    <p>performer: @LogicProvider.GetUserLogicForWeb.GetUserById(success.PerformerId).Name</p>
+                                }
+                            </div>
+                        </div>
+                    </div>
+                }
+            </div>
+            }
+
+
+
+
+        </div>
+    </div>
+</div>
+
+@*<script scr="js/bootstrap-popover.js"></script>*@
+<script src="js/bootstrap-transition.js"></script>
+<script src="js/bootstrap-collapse.js"></script>
+
+<script>
+
+    $.getScript('~/Scripts/forEmail.js', function () {
+        alert('script loaded');
+    });
+
+</script>

@@ -1,0 +1,18 @@
+d:\my documents\visual studio 2015\Projects\comicsProject_v2\comics.DAL.Contract\bin\Debug\comics.DAL.Contract.dll
+d:\my documents\visual studio 2015\Projects\comicsProject_v2\comics.DAL.Contract\bin\Debug\comics.DAL.Contract.pdb
+d:\my documents\visual studio 2015\Projects\comicsProject_v2\comics.DAL.Contract\bin\Debug\comics.Entities.dll
+d:\my documents\visual studio 2015\Projects\comicsProject_v2\comics.DAL.Contract\bin\Debug\comics.Entities.pdb
+d:\my documents\visual studio 2015\Projects\comicsProject_v2\comics.DAL.Contract\obj\Debug\comics.DAL.Contract.csprojResolveAssemblyReference.cache
+d:\my documents\visual studio 2015\Projects\comicsProject_v2\comics.DAL.Contract\obj\Debug\comics.DAL.Contract.dll
+d:\my documents\visual studio 2015\Projects\comicsProject_v2\comics.DAL.Contract\obj\Debug\comics.DAL.Contract.pdb
+C:\Users\A\Documents\Visual Studio 2015\Projects\comicsProject_v2\comics.DAL.Contract\bin\Debug\comics.DAL.Contract.dll
+C:\Users\A\Documents\Visual Studio 2015\Projects\comicsProject_v2\comics.DAL.Contract\bin\Debug\comics.DAL.Contract.pdb
+C:\Users\A\Documents\Visual Studio 2015\Projects\comicsProject_v2\comics.DAL.Contract\bin\Debug\comics.Entities.dll
+C:\Users\A\Documents\Visual Studio 2015\Projects\comicsProject_v2\comics.DAL.Contract\bin\Debug\comics.Entities.pdb
+C:\Users\A\Documents\Visual Studio 2015\Projects\comicsProject_v2\comics.DAL.Contract\obj\Debug\comics.DAL.Contract.csprojResolveAssemblyReference.cache
+C:\Users\A\Documents\Visual Studio 2015\Projects\comicsProject_v2\comics.DAL.Contract\obj\Debug\comics.DAL.Contract.dll
+C:\Users\A\Documents\Visual Studio 2015\Projects\comicsProject_v2\comics.DAL.Contract\obj\Debug\comics.DAL.Contract.pdb
+C:\Users\A\Documents\Visual Studio 2015\Projects\comicsProject_v2\comics.DAL.Contract\bin\Debug\Newtonsoft.Json.dll
+C:\Users\A\Documents\Visual Studio 2015\Projects\comicsProject_v2\comics.DAL.Contract\bin\Debug\Newtonsoft.Json.xml
+D:\My documents\visual studio 2015\Projects\comicsProject_v2\comics.DAL.Contract\bin\Debug\Newtonsoft.Json.dll
+D:\My documents\visual studio 2015\Projects\comicsProject_v2\comics.DAL.Contract\bin\Debug\Newtonsoft.Json.xml

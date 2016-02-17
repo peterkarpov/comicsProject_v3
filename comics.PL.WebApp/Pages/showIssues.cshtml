@@ -1,0 +1,50 @@
+﻿@using System
+@using comics.PL.WebApp
+@using comics.Entities;
+@{
+    Layout = "~/_Layout.cshtml";
+
+    PageData["Title"] = "show issues";
+
+}
+
+<div class="container">
+
+    <div class="panel panel-primary">
+
+        @RenderPage("~/_NavigationPartial.cshtml")
+
+        <div class="panel-heading">
+            <span>show issues and his series</span>
+        </div>
+
+        <div class="panel-body">
+
+            <div class="list-group">
+
+                @if (LogicProvider.GetIssueLogicForWeb.GetAllIssue().ToList().Count() == 0)
+                {
+                    <div class="container-fluid row">
+                        <div class="col-sm-6 col-sm-offset-3">
+                            <div class="alert alert-danger">can't no one issue, sorry...</div>
+                        </div>
+                    </div>
+                }
+
+                @foreach (var issue in LogicProvider.GetIssueLogicForWeb.GetAllIssue().ToList())
+                {
+                    <a href="~/Pages/showOneIssue.cshtml?issueId=@issue.Id" class="list-group-item">
+
+                        <h4 class="list-group-item-heading">@issue.Series</h4>
+                        <p class="list-group-item-text"><b>@issue.Volume</b></p>
+                        <p class="list-group-item-text">@issue.IssueName</p>
+
+                    </a>
+                     
+                }
+
+            </div>
+
+        </div>
+    </div>
+</div>
