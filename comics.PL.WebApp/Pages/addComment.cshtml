@@ -1,0 +1,22 @@
+﻿@using System
+@using comics.PL.WebApp
+@using comics.Entities;
+@{
+
+    if (IsPost)
+    {
+        string text = (string)Request["text"];
+        string authorName = (string)Request["authorName"];
+        Guid issueId = Guid.Parse(Request["issueId"]);
+
+        Guid authorId = LogicProvider.GetUserLogicForWeb.GetUserByName(authorName).Id;
+
+        var newComment = new Comment { Text = text, AuthorID = authorId, CreationTime = DateTime.Now, IssueID = issueId };
+
+        LogicProvider.GetCommentLogicForWeb.Add(newComment);
+
+        Response.Redirect(Request.UrlReferrer.ToString());
+
+    }
+
+}

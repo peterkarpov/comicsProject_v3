@@ -1,0 +1,36 @@
+﻿@using comics.PL.WebApp
+
+<div class="container-fluid">
+
+    <div class="panel panel-primary">
+
+        <div class="panel-body">
+
+            @if (User.Identity.IsAuthenticated)
+            {
+                <span>
+                    Hello, @User.Identity.Name!
+                    you are registered
+                </span>
+
+                if (User.IsInRole("admin"))
+                {
+                    <span>and your right match a "admin"</span>
+                }
+                else if (User.IsInRole("moderator"))
+                {
+                    <span>and your right match a "moderator"</span>
+                }
+                <div style="float:right"><a class="btn btn-default btn-xs" href="~/LoginLogic/SignOut.cshtml">Sign Out</a></div>
+                <div style="float:right; margin-right:10px;"><a class="btn btn-default btn-xs" href="~/Pages/editUser.cshtml?userId=@LogicProvider.GetUserLogicForWeb.GetUserByName(User.Identity.Name).Id">Edit Profile</a></div>
+            }
+            else
+            {
+                <span>Hello, guest! You are not registered</span>
+                <div style="float:right"><a class="btn btn-default btn-xs" href="~/LoginLogic/SignIn.cshtml">Sign In</a></div>
+            }
+
+
+        </div>
+    </div>
+</div>

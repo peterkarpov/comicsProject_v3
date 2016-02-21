@@ -1,0 +1,44 @@
+d:\my documents\visual studio 2015\Projects\comicsProject_v2\comics.DAL.SQL\bin\Debug\comics.DAL.SQL.dll
+d:\my documents\visual studio 2015\Projects\comicsProject_v2\comics.DAL.SQL\bin\Debug\comics.DAL.SQL.pdb
+d:\my documents\visual studio 2015\Projects\comicsProject_v2\comics.DAL.SQL\bin\Debug\comics.DAL.Contract.dll
+d:\my documents\visual studio 2015\Projects\comicsProject_v2\comics.DAL.SQL\bin\Debug\comics.Entities.dll
+d:\my documents\visual studio 2015\Projects\comicsProject_v2\comics.DAL.SQL\bin\Debug\comics.DAL.Contract.pdb
+d:\my documents\visual studio 2015\Projects\comicsProject_v2\comics.DAL.SQL\bin\Debug\comics.Entities.pdb
+d:\my documents\visual studio 2015\Projects\comicsProject_v2\comics.DAL.SQL\obj\Debug\comics.DAL.SQL.csprojResolveAssemblyReference.cache
+d:\my documents\visual studio 2015\Projects\comicsProject_v2\comics.DAL.SQL\obj\Debug\comics.DAL.SQL.dll
+d:\my documents\visual studio 2015\Projects\comicsProject_v2\comics.DAL.SQL\obj\Debug\comics.DAL.SQL.pdb
+C:\Users\A\Documents\Visual Studio 2015\Projects\comicsProject_v2\comics.DAL.SQL\bin\Debug\comics.DAL.SQL.dll
+C:\Users\A\Documents\Visual Studio 2015\Projects\comicsProject_v2\comics.DAL.SQL\bin\Debug\comics.DAL.SQL.pdb
+C:\Users\A\Documents\Visual Studio 2015\Projects\comicsProject_v2\comics.DAL.SQL\bin\Debug\comics.DAL.Contract.dll
+C:\Users\A\Documents\Visual Studio 2015\Projects\comicsProject_v2\comics.DAL.SQL\bin\Debug\comics.Entities.dll
+C:\Users\A\Documents\Visual Studio 2015\Projects\comicsProject_v2\comics.DAL.SQL\bin\Debug\comics.DAL.Contract.pdb
+C:\Users\A\Documents\Visual Studio 2015\Projects\comicsProject_v2\comics.DAL.SQL\bin\Debug\comics.Entities.pdb
+C:\Users\A\Documents\Visual Studio 2015\Projects\comicsProject_v2\comics.DAL.SQL\obj\Debug\comics.DAL.SQL.csprojResolveAssemblyReference.cache
+C:\Users\A\Documents\Visual Studio 2015\Projects\comicsProject_v2\comics.DAL.SQL\obj\Debug\comics.DAL.SQL.dll
+C:\Users\A\Documents\Visual Studio 2015\Projects\comicsProject_v2\comics.DAL.SQL\obj\Debug\comics.DAL.SQL.pdb
+C:\Users\A\Documents\Visual Studio 2015\Projects\comicsProject_v2\comics.DAL.SQL\bin\Debug\Newtonsoft.Json.dll
+C:\Users\A\Documents\Visual Studio 2015\Projects\comicsProject_v2\comics.DAL.SQL\bin\Debug\Newtonsoft.Json.xml
+D:\My documents\visual studio 2015\Projects\comicsProject_v2\comics.DAL.SQL\bin\Debug\Newtonsoft.Json.dll
+D:\My documents\visual studio 2015\Projects\comicsProject_v2\comics.DAL.SQL\bin\Debug\Newtonsoft.Json.xml
+D:\My documents\Visual Studio 2015\Projects\comicsProject_v3\comics.DAL.SQL\bin\Debug\comics.DAL.SQL.dll
+D:\My documents\Visual Studio 2015\Projects\comicsProject_v3\comics.DAL.SQL\bin\Debug\comics.DAL.SQL.pdb
+D:\My documents\Visual Studio 2015\Projects\comicsProject_v3\comics.DAL.SQL\bin\Debug\comics.DAL.Contract.dll
+D:\My documents\Visual Studio 2015\Projects\comicsProject_v3\comics.DAL.SQL\bin\Debug\comics.Entities.dll
+D:\My documents\Visual Studio 2015\Projects\comicsProject_v3\comics.DAL.SQL\bin\Debug\Newtonsoft.Json.dll
+D:\My documents\Visual Studio 2015\Projects\comicsProject_v3\comics.DAL.SQL\bin\Debug\comics.DAL.Contract.pdb
+D:\My documents\Visual Studio 2015\Projects\comicsProject_v3\comics.DAL.SQL\bin\Debug\comics.Entities.pdb
+D:\My documents\Visual Studio 2015\Projects\comicsProject_v3\comics.DAL.SQL\bin\Debug\Newtonsoft.Json.xml
+D:\My documents\Visual Studio 2015\Projects\comicsProject_v3\comics.DAL.SQL\obj\Debug\comics.DAL.SQL.csprojResolveAssemblyReference.cache
+D:\My documents\Visual Studio 2015\Projects\comicsProject_v3\comics.DAL.SQL\obj\Debug\comics.DAL.SQL.dll
+D:\My documents\Visual Studio 2015\Projects\comicsProject_v3\comics.DAL.SQL\obj\Debug\comics.DAL.SQL.pdb
+C:\Users\A\Source\Repos\comicsProject_v3\comics.DAL.SQL\bin\Debug\comics.DAL.SQL.dll
+C:\Users\A\Source\Repos\comicsProject_v3\comics.DAL.SQL\bin\Debug\comics.DAL.SQL.pdb
+C:\Users\A\Source\Repos\comicsProject_v3\comics.DAL.SQL\bin\Debug\comics.DAL.Contract.dll
+C:\Users\A\Source\Repos\comicsProject_v3\comics.DAL.SQL\bin\Debug\comics.Entities.dll
+C:\Users\A\Source\Repos\comicsProject_v3\comics.DAL.SQL\bin\Debug\Newtonsoft.Json.dll
+C:\Users\A\Source\Repos\comicsProject_v3\comics.DAL.SQL\bin\Debug\comics.DAL.Contract.pdb
+C:\Users\A\Source\Repos\comicsProject_v3\comics.DAL.SQL\bin\Debug\comics.Entities.pdb
+C:\Users\A\Source\Repos\comicsProject_v3\comics.DAL.SQL\bin\Debug\Newtonsoft.Json.xml
+C:\Users\A\Source\Repos\comicsProject_v3\comics.DAL.SQL\obj\Debug\comics.DAL.SQL.csprojResolveAssemblyReference.cache
+C:\Users\A\Source\Repos\comicsProject_v3\comics.DAL.SQL\obj\Debug\comics.DAL.SQL.dll
+C:\Users\A\Source\Repos\comicsProject_v3\comics.DAL.SQL\obj\Debug\comics.DAL.SQL.pdb

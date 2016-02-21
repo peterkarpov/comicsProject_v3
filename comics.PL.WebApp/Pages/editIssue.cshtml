@@ -1,0 +1,270 @@
+﻿@using System
+@using comics.PL.WebApp
+@using comics.Entities;
+@{
+    Layout = "~/_Layout.cshtml";
+
+    PageData["Title"] = "edit issue";
+
+    string errorMessage = null;
+
+    Issue issue = null;
+
+    //start block of Authenticated
+    if (User.Identity.IsAuthenticated & (User.IsInRole("moderator") | User.IsInRole("admin")))
+    {
+        //
+
+        if (IsPost)
+        {
+            var IssueForEdit = new Issue
+            {
+                Id = Guid.Parse(Request["issueId"]),
+                IssueName = Request["issue"],
+                Series = Request["series"],
+                Volume = Request["volume"]
+            };
+
+            if (LogicProvider.GetIssueLogicForWeb.EditIssue(IssueForEdit))
+            {
+                Response.Redirect("~/Pages/showIssues.cshtml");
+            }
+            else
+            {
+                errorMessage = "failed to edit issue";
+            }
+        }
+
+        if (!IsPost)
+        {
+            issue = LogicProvider.GetIssueLogicForWeb.GetIssueById(Guid.Parse(Request["issueId"]));
+        }
+
+        //
+    }
+    else
+    {
+        Response.Redirect("~/Pages/addUser.cshtml");
+    }
+    //end block of Authenticated
+
+}
+
+<div class="container">
+
+    <div class="panel panel-primary">
+
+        @RenderPage("~/_NavigationPartial.cshtml")
+
+        <div class="panel-heading">
+            <span>edit issue</span>
+        </div>
+        <div class="panel-body">
+
+            <div class="container-fluid row">
+                <div class="col-sm-6 col-sm-offset-3">
+
+                    <form role="form" method="post" action="">
+                        <div class="form-group">
+                            <label for="exampleInputSeries">Series:</label>
+                            <div class="input-group">
+                                <input type="text" name="series" value="@issue.Series" class="form-control">
+                                <div class="input-group-btn" id="listOfSeries">
+                                    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></button>
+                                    <ul class="dropdown-menu pull-right"></ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputVolume">Volume:</label>
+                            <div class="input-group">
+                                <input type="text" name="volume" value="@issue.Volume" class="form-control">
+                                <div class="input-group-btn" id="listOfVolumes">
+                                    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></button>
+                                    <ul class="dropdown-menu pull-right"></ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <label for="exampleInputIssue">Issue:</label>
+                        <div class="input-group">
+
+                            <input type="text" name="issue" value="@issue.IssueName" class="form-control">
+
+                            <div class="input-group-btn" id="listOfIssues">
+                                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></button>
+                                <ul class="dropdown-menu pull-right" id="listOfIssue"></ul>
+                            </div>
+
+                        </div>
+                        <br />
+
+                        @if (errorMessage != null)
+                        {
+                            <div class="alert alert-danger">@errorMessage</div>
+                        }
+
+                        <input type="hidden" name="issueId" value="@issue.Id" />
+
+                        <button type="submit" class="btn btn-primary center-block">Edit Issue</button>
+                    </form>
+
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+
+    //list of series
+
+    $("#listOfSeries").children("button").click(function () {
+        $.ajax({
+
+            url: "/Pages/getListOfSeries",
+            type: "post",
+
+        }).success(function (data) {
+
+            var result = JSON.parse(data);
+
+            $("#listOfSeries").children("ul").empty();
+            if ((result == null) || (result.length == 0)) {
+                $("#listOfSeries").children("ul").append('<li role="presentation" class="dropdown-header">(empty)</li>');
+            }
+            else {
+                result.forEach(function (item, i, result) {
+                    $("#listOfSeries").children("ul").append('<li><a href="#">' + result[i] + '</a></li>');
+                });
+            }
+
+        })
+    })
+
+    $("#listOfSeries").children("ul").on('click', 'li', function (e) {
+        $("#listOfSeries").prev("input").val(e.target.text);
+    })
+
+
+    //list of volumes
+
+    $("#listOfVolumes").children("button").click(function () {
+
+        var series = $("input[name = series]").val();
+
+        $.ajax({
+
+            url: "/Pages/getlistOfVolumes",
+            type: "post",
+
+            data: { series: series },
+
+        }).success(function (data) {
+
+            var result = JSON.parse(data);
+
+            $("#listOfVolumes").children("ul").empty();
+            if ((result == null) || (result.length == 0)) {
+                $("#listOfVolumes").children("ul").append('<li role="presentation" class="dropdown-header">(empty)</li>');
+            }
+            else {
+                result.forEach(function (item, i, result) {
+                    $("#listOfVolumes").children("ul").append('<li><a href="#">' + result[i] + '</a></li>');
+                });
+            }
+
+        })
+    })
+
+    $("#listOfVolumes").children("ul").on('click', 'li', function (e) {
+        $("#listOfVolumes").prev("input").val(e.target.text);
+    })
+
+    //list of issues
+
+    $("#listOfIssues").children("button").click(function () {
+
+        var volume = $("input[name = volume]").val();
+
+        $.ajax({
+
+            url: "/Pages/getlistOfIssues",
+            type: "post",
+
+            data: { volume: volume },
+
+        }).success(function (data) {
+
+            var result = JSON.parse(data);
+
+            $("#listOfIssues").children("ul").empty();
+
+            if ((result == null)||(result.length==0)) {
+                $("#listOfIssues").children("ul").append('<li role="presentation" class="dropdown-header">(empty)</li>');
+            }
+            else {
+                result.forEach(function (item, i, result) {
+                    $("#listOfIssues").children("ul").append('<li><a href="#">' + result[i] + '</a></li>');
+                });
+            }
+        })
+    })
+
+    $("#listOfIssues").children("ul").on('click', 'li', function (e) {
+        $("#listOfIssues").prev("input").val(e.target.text);
+    })
+
+    function fulfill() {
+
+        console.log("start fulfill");
+
+        var series = $("input[name = series]").val();
+        var volume = $("input[name = volume]").val();
+        var issue = $("input[name = issue]").val();
+
+        console.log("series - " + series);
+        console.log("volume - " + volume);
+        console.log("issue - " + issue);
+
+        $.ajax({
+
+            url: "/Pages/fulfill",
+            type: "post",
+            data: { series: series, volume: volume, issue: issue },
+
+        }).success(function (data) {
+
+            console.log("end ajax");
+            console.log("typeof (data) : " + typeof (data));
+            console.log("data :" + data);
+
+            var result = JSON.parse(data);
+            console.log("typeof (result) : " + typeof (result));
+            console.log("result : " + result);
+
+            console.log(result[0]);
+            console.log(result[1]);
+
+            var $forFulFill = $("#listOfIssue");
+
+            $forFulFill.empty()
+            result.forEach(function (item, i, result) {
+                console.log(result[i]);
+                $forFulFill.append('<li><a href="#">' + result[i] + '</a></li>');
+
+            });
+
+        }).always(function () {
+            console.log("always ajax")
+        })
+
+    };
+
+    $("#listOfIssue").on('click', 'li', function () {
+        console.log("li click");
+    })
+
+</script>

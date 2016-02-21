@@ -1,0 +1,95 @@
+﻿@using System
+@using comics.PL.WebApp
+@using comics.Entities;
+@{
+    Layout = "~/_Layout.cshtml";
+
+    PageData["Title"] = "show succes";
+
+    //start block of Authenticated
+    if (!User.Identity.IsAuthenticated | !User.IsInRole("moderator"))
+    {
+        Response.Redirect("~/Pages/addUser.cshtml");
+    }
+
+}
+
+<div class="container">
+
+    <div class="panel panel-primary">
+
+        @RenderPage("~/_NavigationPartial.cshtml")
+
+        <div class="panel-heading">
+            <span>show succes</span>
+        </div>
+
+        <div class="panel-body">
+
+            <ul class="list-group">
+
+
+
+                @foreach (var success in LogicProvider.GetSuccessLogicForWeb.GetAllSuccess().ToList())
+                {
+                    <li class="list-group-item
+                        @if (success.Status == "checked") { <text>list-group-item-success</text> }
+                        @if (success.Status == "inProgress") { <text>list-group-item-info</text> }
+                        ">
+
+                        <div class="pull-right" style="position:relative;right:10px">
+
+                            <form method="post" action="~/Pages/setPerformer.cshtml" class="pull-right">
+                                <input type="hidden" name="successId" value="@success.Id" />
+                                @if (success.Status == "created")
+                                {
+                                    <button style="margin-left:10px" type="submit" class="btn btn-info btn-sm">accept</button>
+                                }
+                                @if (success.Status == "inProgress")
+                                {
+                                    if (User.IsInRole("admin") | !LogicProvider.GetUserLogicForWeb.ExistUser(success.PerformerId) || (User.Identity.Name == LogicProvider.GetUserLogicForWeb.GetUserById(success.PerformerId).Name))
+                                    {
+                                        <button style="margin-left:10px" type="submit" class="btn btn-warning btn-sm">abandon</button>
+                                    }
+                                }
+                            </form>
+
+                            @if (User.Identity.IsAuthenticated & User.IsInRole("admin"))
+                            {
+                                <form method="post" action="~/Pages/checkedSuccess.cshtml" class="pull-right">
+                                    <input type="hidden" name="successId" value="@success.Id" />
+                                    @if (success.Status == "checked")
+                                    {
+                                        <button style="margin-left:10px" type="submit" class="btn btn-warning btn-sm">uncheck</button>
+                                    }
+                                    @if (success.Status == "inProgress")
+                                    {
+                                        <button style="margin-left:10px" type="submit" class="btn btn-success btn-sm">check</button>
+                                    }
+                                </form>
+
+                                <a href="~/Pages/editSuccess.cshtml?successId=@success.Id" class="btn btn-default btn-sm">Edit Discription </a>
+                            }
+                        </div>
+
+                        <div class="aboutSuccess" style="display:inline">
+                            <p class="list-group-item-text">curator: @(LogicProvider.GetUserLogicForWeb.ExistUser(success.CuratorId) ? LogicProvider.GetUserLogicForWeb.GetUserById(success.CuratorId).Name : "User has been deleted own profile...")</p>
+                            <p class="list-group-item-text"><i>@success.CreationTime</i></p>
+                            <p class="list-group-item-heading">@success.SuccessDiscription</p>
+                            <p class="list-group-item-text">status: <b>@success.Status</b></p>
+
+                            @if (success.PerformerId != default(Guid))
+                            {
+                                <p class="list-group-item-text">performer: @(LogicProvider.GetUserLogicForWeb.ExistUser(success.PerformerId) ? LogicProvider.GetUserLogicForWeb.GetUserById(success.PerformerId).Name : "User has been deleted own profile...")</p>
+                            }
+
+                        </div>
+
+                    </li>
+                }
+
+            </ul>
+
+        </div>
+    </div>
+</div>

@@ -1,0 +1,42 @@
+﻿a {
+
+    outline:none;
+
+}
+
+div.container {
+
+    min-height:100%;
+}
+
+.container >.panel > div.panel-body {
+
+    min-height:100%;   /*but no page showOneIssue*/
+    vertical-align:middle;
+}
+
+.aboutSuccess {
+
+    display:inline-block;
+}
+
+.buttonChecked {
+    
+    display:inline-block;
+    float:right;
+    margin-right:10px;
+
+}
+
+.buttonPurhase {
+
+    display:inline-block;
+    float:right;
+}
+
+.buttonAbandon {
+
+    display:inline-block;
+    float:right;
+
+}

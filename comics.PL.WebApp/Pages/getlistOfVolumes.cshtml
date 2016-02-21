@@ -1,0 +1,12 @@
+﻿@using comics.PL.WebApp
+@using Newtonsoft.Json;
+@{
+    if (IsAjax)
+    {
+        var series = Request["series"];
+        
+        Response.Write(JsonConvert.SerializeObject(LogicProvider.GetIssueLogicForWeb.GetListOfVolumeOnSeries(series)));
+
+    }
+    
+}

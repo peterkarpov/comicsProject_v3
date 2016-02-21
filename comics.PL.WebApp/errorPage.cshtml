@@ -1,0 +1,38 @@
+﻿@{
+    Layout = "~/_Layout.cshtml";
+
+    PageData["Title"] = "error page";
+
+    string err = null;
+
+    if (!IsPost)
+    {
+        err = Request["err"];
+    }
+}
+
+<div class="container">
+
+    <div class="panel panel-primary">
+
+        @RenderPage("~/_NavigationPartial.cshtml")
+
+        <div class="panel-heading">
+            <span>error page</span>
+        </div>
+
+        <div class="panel-body text-center">
+
+            <h1>Congratulations!</h1>
+            <p>...you just broke my site...</p>
+
+            @if (err != null)
+            {
+                <p>this is @err exeption</p>
+            }
+
+            <a href="~/index.cshtml">Wanna go to start page?</a>
+
+        </div>
+    </div>
+</div>

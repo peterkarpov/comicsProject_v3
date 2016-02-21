@@ -1,0 +1,30 @@
+﻿@using comics.PL.WebApp
+@using System.Drawing
+@using comics.Entities;
+@{
+
+    byte[] imgbyte;
+    string mime;
+
+    if (!IsPost & (LogicProvider.GetPageLogicForWeb.GetCountPagesOnIssue(Guid.Parse(Request["issueId"])) != 0))
+    {
+        Guid issueId = Guid.Parse(Request["issueId"]);
+
+        int number = int.Parse(Request["number"]);
+
+
+        //if (number > LogicProvider.GetPageLogicForWeb.GetCountPagesOnIssue(issueId))
+        //{
+        //    number = 1;
+        //}
+
+        comics.Entities.Page page = LogicProvider.GetPageLogicForWeb.GetOnePagesOnIssue(issueId, number);
+
+        imgbyte = page.img;
+        mime = page.MIME;
+
+        Response.WriteBinary(imgbyte, mime);
+
+    }
+
+}

@@ -1,0 +1,29 @@
+﻿@using System
+@using comics.PL.WebApp
+@{
+    
+    //start block of Authenticated
+    if (User.Identity.IsAuthenticated & User.IsInRole("moderator"))
+    {
+        //
+
+        if (IsPost)
+        {
+            Guid successId = Guid.Parse(Request["successId"]);
+
+
+            Guid performerId = LogicProvider.GetUserLogicForWeb.GetUserByName(User.Identity.Name).Id;
+            LogicProvider.GetSuccessLogicForWeb.SetPerformer(successId, performerId);
+            
+            Response.Redirect("~/Pages/showSuccess.cshtml");
+
+        }
+
+        //
+    }
+    else
+    {
+        Response.Redirect("~/Pages/addUser.cshtml");
+    }
+    //end block of Authenticated
+}

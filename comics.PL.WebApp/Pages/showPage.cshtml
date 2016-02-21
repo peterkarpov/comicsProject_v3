@@ -1,0 +1,150 @@
+﻿@using System
+@using comics.PL.WebApp
+@using comics.Entities;
+@{
+
+    //http://www.w3schools.com/aspnet/webpages_forms.asp
+
+    Layout = "~/_Layout.cshtml";
+
+    PageData["Title"] = "show page";
+
+
+    string volume = null;
+    Guid issueId = default(Guid);
+    int number = 0;
+
+    Issue issueForTitle = null;
+
+
+    if ((Request["issueId"] != null) & (Request["number"] != null))
+    {
+
+        issueId = Guid.Parse(Request["issueId"]);
+
+        issueForTitle = LogicProvider.GetIssueLogicForWeb.GetIssueById(issueId);
+
+        volume = issueForTitle.Volume;
+        number = int.Parse(Request["number"]);
+        if (number <= 0)
+        {
+            number = 1;
+        }
+
+    }
+
+    int issuePageCount = LogicProvider.GetPageLogicForWeb.GetCountPagesOnIssue(issueId);
+
+    if (number > issuePageCount)
+    {
+        number = 1;
+    }
+
+
+}
+
+<div class="container">
+
+    <div class="panel panel-primary">
+
+        @RenderPage("~/_NavigationPartial.cshtml")
+
+        <div class="panel-heading">
+            <span>show @issueForTitle.Series - @issueForTitle.Volume - @issueForTitle.IssueName</span>
+        </div>
+
+
+        <div class="panel-body">
+
+
+
+
+
+            @if ((Request["issueId"] != null) & (Request["number"] != null))
+            {
+
+                <a name="thisPage"></a>
+
+                <form method="get" action="" class="text-center">
+
+                    <input type="hidden" name="volume" id="volume" value="@volume">
+
+                    <b>Issue:</b>
+                    <select name="issueId" onChange="this.form.submit()" class="form-control-static">
+
+                        @if (volume != null)
+                        {
+                            foreach (var issue in LogicProvider.GetIssueLogicForWeb.GetIssueOnVolume(volume).ToList())
+                            {
+                                if (issue.Id == issueId)
+                                {
+                                    <option value="@issue.Id" selected="selected">@issue.IssueName</option>
+                                }
+                                else
+                                {
+                                    <option value="@issue.Id">@issue.IssueName</option>
+                                }
+                            }
+                        }
+                    </select>
+
+                    <b>Page:</b>
+                    <select name="number" onChange="this.form.submit()" class="form-control-static">
+
+                        @if (number != 0)
+                        {
+                            for (int i = 1; i <= LogicProvider.GetPageLogicForWeb.GetCountPagesOnIssue(issueId); i++)
+                            {
+
+                                if (i == number)
+                                {
+                                    <option value="@i" selected="selected">@i</option>
+                                }
+                                else
+                                {
+                                    <option value="@i">@i</option>
+                                }
+                            }
+                        }
+                    </select>
+
+
+
+                </form>
+
+
+            }
+
+
+
+            @if (number != 0)
+            {
+                <br />
+                <div>
+                    @*<img src="~/Pages/getImage?issueId=@Request["issueId"]&number=@Request["number"]" alt="issue=@issueId&number=@number">*@
+                    <img width="50%" class="center-block" src="~/Pages/getImage?issueId=@issueId&number=@number" alt="No have page in issue=@issueId & number=@number">
+
+                </div>
+            }
+
+            <ul class="pager">
+
+                @if (number - 1 > 0)
+                {
+                    <li><a href="~/Pages/showPage.cshtml?&issueId=@(issueId)&number=@(number - 1)#thisPage">&larr; Предыдущая</a></li>
+                }
+                @if (number + 1 <= issuePageCount)
+                {
+                    <li><a href="~/Pages/showPage.cshtml?&issueId=@(issueId)&number=@(number + 1)#thisPage">Следующая &rarr;</a></li>
+                }
+            </ul>
+
+            @if (User.IsInRole("moderator"))
+            {
+                <div class="text-center">
+                    <a href="~/Pages/delPage.cshtml?issueId=@issueId&number=@number" type="button" class="btn btn-danger">Delete This Page</a>
+                </div>
+            }
+        </div>
+    </div>
+</div>

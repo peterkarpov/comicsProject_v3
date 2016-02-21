@@ -1,0 +1,30 @@
+﻿@using System
+@using comics.PL.WebApp
+@{
+
+
+    //start block of Authenticated
+    if (User.Identity.IsAuthenticated & User.IsInRole("admin"))
+    {
+        //
+        
+        if (IsPost)
+        {
+            Guid successId = Guid.Parse(Request["successId"]);
+
+            //LogicProvider.GetSuccessLogicForWeb.ChangeStatusOnSuccess(successId, "checked");
+
+            LogicProvider.GetSuccessLogicForWeb.CheckedSuccess(successId);
+
+            Response.Redirect("~/Pages/showSuccess.cshtml");
+
+        }
+
+        //
+    }
+    else
+    {
+        Response.Redirect("~/Pages/addUser.cshtml");
+    }
+    //end block of Authenticated
+}

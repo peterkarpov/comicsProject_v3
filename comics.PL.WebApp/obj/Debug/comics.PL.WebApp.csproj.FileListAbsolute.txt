@@ -1,0 +1,172 @@
+d:\my documents\visual studio 2015\Projects\comicsProject_v2\comics.PL.WebApp\obj\Debug\comics.PL.WebApp.csprojResolveAssemblyReference.cache
+d:\my documents\visual studio 2015\Projects\comicsProject_v2\comics.PL.WebApp\bin\roslyn\csc.exe
+d:\my documents\visual studio 2015\Projects\comicsProject_v2\comics.PL.WebApp\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+d:\my documents\visual studio 2015\Projects\comicsProject_v2\comics.PL.WebApp\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+d:\my documents\visual studio 2015\Projects\comicsProject_v2\comics.PL.WebApp\bin\roslyn\Microsoft.CodeAnalysis.dll
+d:\my documents\visual studio 2015\Projects\comicsProject_v2\comics.PL.WebApp\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+d:\my documents\visual studio 2015\Projects\comicsProject_v2\comics.PL.WebApp\bin\roslyn\Microsoft.CSharp.Core.targets
+d:\my documents\visual studio 2015\Projects\comicsProject_v2\comics.PL.WebApp\bin\roslyn\Microsoft.VisualBasic.Core.targets
+d:\my documents\visual studio 2015\Projects\comicsProject_v2\comics.PL.WebApp\bin\roslyn\System.Collections.Immutable.dll
+d:\my documents\visual studio 2015\Projects\comicsProject_v2\comics.PL.WebApp\bin\roslyn\System.Reflection.Metadata.dll
+d:\my documents\visual studio 2015\Projects\comicsProject_v2\comics.PL.WebApp\bin\roslyn\vbc.exe
+d:\my documents\visual studio 2015\Projects\comicsProject_v2\comics.PL.WebApp\bin\roslyn\VBCSCompiler.exe
+d:\my documents\visual studio 2015\Projects\comicsProject_v2\comics.PL.WebApp\bin\roslyn\VBCSCompiler.exe.config
+d:\my documents\visual studio 2015\Projects\comicsProject_v2\comics.PL.WebApp\bin\comics.PL.WebApp.dll.config
+d:\my documents\visual studio 2015\Projects\comicsProject_v2\comics.PL.WebApp\bin\comics.PL.WebApp.dll
+d:\my documents\visual studio 2015\Projects\comicsProject_v2\comics.PL.WebApp\bin\comics.PL.WebApp.pdb
+d:\my documents\visual studio 2015\Projects\comicsProject_v2\comics.PL.WebApp\bin\comics.BLL.Contract.dll
+d:\my documents\visual studio 2015\Projects\comicsProject_v2\comics.PL.WebApp\bin\comics.BLL.Core.dll
+d:\my documents\visual studio 2015\Projects\comicsProject_v2\comics.PL.WebApp\bin\comics.Entities.dll
+d:\my documents\visual studio 2015\Projects\comicsProject_v2\comics.PL.WebApp\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+d:\my documents\visual studio 2015\Projects\comicsProject_v2\comics.PL.WebApp\bin\Microsoft.Web.Infrastructure.dll
+d:\my documents\visual studio 2015\Projects\comicsProject_v2\comics.PL.WebApp\bin\System.Web.Helpers.dll
+d:\my documents\visual studio 2015\Projects\comicsProject_v2\comics.PL.WebApp\bin\System.Web.Razor.dll
+d:\my documents\visual studio 2015\Projects\comicsProject_v2\comics.PL.WebApp\bin\System.Web.WebPages.Deployment.dll
+d:\my documents\visual studio 2015\Projects\comicsProject_v2\comics.PL.WebApp\bin\System.Web.WebPages.dll
+d:\my documents\visual studio 2015\Projects\comicsProject_v2\comics.PL.WebApp\bin\System.Web.WebPages.Razor.dll
+d:\my documents\visual studio 2015\Projects\comicsProject_v2\comics.PL.WebApp\bin\comics.DAL.Contract.dll
+d:\my documents\visual studio 2015\Projects\comicsProject_v2\comics.PL.WebApp\bin\comics.DAL.SQL.dll
+d:\my documents\visual studio 2015\Projects\comicsProject_v2\comics.PL.WebApp\bin\comics.BLL.Contract.pdb
+d:\my documents\visual studio 2015\Projects\comicsProject_v2\comics.PL.WebApp\bin\comics.BLL.Core.pdb
+d:\my documents\visual studio 2015\Projects\comicsProject_v2\comics.PL.WebApp\bin\comics.Entities.pdb
+d:\my documents\visual studio 2015\Projects\comicsProject_v2\comics.PL.WebApp\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+d:\my documents\visual studio 2015\Projects\comicsProject_v2\comics.PL.WebApp\bin\System.Web.Helpers.xml
+d:\my documents\visual studio 2015\Projects\comicsProject_v2\comics.PL.WebApp\bin\System.Web.Razor.xml
+d:\my documents\visual studio 2015\Projects\comicsProject_v2\comics.PL.WebApp\bin\System.Web.WebPages.xml
+d:\my documents\visual studio 2015\Projects\comicsProject_v2\comics.PL.WebApp\bin\System.Web.WebPages.Deployment.xml
+d:\my documents\visual studio 2015\Projects\comicsProject_v2\comics.PL.WebApp\bin\System.Web.WebPages.Razor.xml
+d:\my documents\visual studio 2015\Projects\comicsProject_v2\comics.PL.WebApp\bin\comics.DAL.Contract.pdb
+d:\my documents\visual studio 2015\Projects\comicsProject_v2\comics.PL.WebApp\bin\comics.DAL.SQL.pdb
+d:\my documents\visual studio 2015\Projects\comicsProject_v2\comics.PL.WebApp\obj\Debug\comics.PL.WebApp.dll
+d:\my documents\visual studio 2015\Projects\comicsProject_v2\comics.PL.WebApp\obj\Debug\comics.PL.WebApp.pdb
+C:\Users\A\Documents\Visual Studio 2015\Projects\comicsProject_v2\comics.PL.WebApp\bin\roslyn\csc.exe
+C:\Users\A\Documents\Visual Studio 2015\Projects\comicsProject_v2\comics.PL.WebApp\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\A\Documents\Visual Studio 2015\Projects\comicsProject_v2\comics.PL.WebApp\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\A\Documents\Visual Studio 2015\Projects\comicsProject_v2\comics.PL.WebApp\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\A\Documents\Visual Studio 2015\Projects\comicsProject_v2\comics.PL.WebApp\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\A\Documents\Visual Studio 2015\Projects\comicsProject_v2\comics.PL.WebApp\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\A\Documents\Visual Studio 2015\Projects\comicsProject_v2\comics.PL.WebApp\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\A\Documents\Visual Studio 2015\Projects\comicsProject_v2\comics.PL.WebApp\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\A\Documents\Visual Studio 2015\Projects\comicsProject_v2\comics.PL.WebApp\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\A\Documents\Visual Studio 2015\Projects\comicsProject_v2\comics.PL.WebApp\bin\roslyn\vbc.exe
+C:\Users\A\Documents\Visual Studio 2015\Projects\comicsProject_v2\comics.PL.WebApp\bin\roslyn\VBCSCompiler.exe
+C:\Users\A\Documents\Visual Studio 2015\Projects\comicsProject_v2\comics.PL.WebApp\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\A\Documents\Visual Studio 2015\Projects\comicsProject_v2\comics.PL.WebApp\bin\comics.PL.WebApp.dll.config
+C:\Users\A\Documents\Visual Studio 2015\Projects\comicsProject_v2\comics.PL.WebApp\bin\comics.PL.WebApp.dll
+C:\Users\A\Documents\Visual Studio 2015\Projects\comicsProject_v2\comics.PL.WebApp\bin\comics.PL.WebApp.pdb
+C:\Users\A\Documents\Visual Studio 2015\Projects\comicsProject_v2\comics.PL.WebApp\bin\comics.BLL.Contract.dll
+C:\Users\A\Documents\Visual Studio 2015\Projects\comicsProject_v2\comics.PL.WebApp\bin\comics.BLL.Core.dll
+C:\Users\A\Documents\Visual Studio 2015\Projects\comicsProject_v2\comics.PL.WebApp\bin\comics.Entities.dll
+C:\Users\A\Documents\Visual Studio 2015\Projects\comicsProject_v2\comics.PL.WebApp\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\A\Documents\Visual Studio 2015\Projects\comicsProject_v2\comics.PL.WebApp\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\A\Documents\Visual Studio 2015\Projects\comicsProject_v2\comics.PL.WebApp\bin\System.Web.Helpers.dll
+C:\Users\A\Documents\Visual Studio 2015\Projects\comicsProject_v2\comics.PL.WebApp\bin\System.Web.Razor.dll
+C:\Users\A\Documents\Visual Studio 2015\Projects\comicsProject_v2\comics.PL.WebApp\bin\System.Web.WebPages.Deployment.dll
+C:\Users\A\Documents\Visual Studio 2015\Projects\comicsProject_v2\comics.PL.WebApp\bin\System.Web.WebPages.dll
+C:\Users\A\Documents\Visual Studio 2015\Projects\comicsProject_v2\comics.PL.WebApp\bin\System.Web.WebPages.Razor.dll
+C:\Users\A\Documents\Visual Studio 2015\Projects\comicsProject_v2\comics.PL.WebApp\bin\comics.DAL.Contract.dll
+C:\Users\A\Documents\Visual Studio 2015\Projects\comicsProject_v2\comics.PL.WebApp\bin\comics.DAL.SQL.dll
+C:\Users\A\Documents\Visual Studio 2015\Projects\comicsProject_v2\comics.PL.WebApp\bin\comics.BLL.Contract.pdb
+C:\Users\A\Documents\Visual Studio 2015\Projects\comicsProject_v2\comics.PL.WebApp\bin\comics.BLL.Core.pdb
+C:\Users\A\Documents\Visual Studio 2015\Projects\comicsProject_v2\comics.PL.WebApp\bin\comics.Entities.pdb
+C:\Users\A\Documents\Visual Studio 2015\Projects\comicsProject_v2\comics.PL.WebApp\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\A\Documents\Visual Studio 2015\Projects\comicsProject_v2\comics.PL.WebApp\bin\System.Web.Helpers.xml
+C:\Users\A\Documents\Visual Studio 2015\Projects\comicsProject_v2\comics.PL.WebApp\bin\System.Web.Razor.xml
+C:\Users\A\Documents\Visual Studio 2015\Projects\comicsProject_v2\comics.PL.WebApp\bin\System.Web.WebPages.xml
+C:\Users\A\Documents\Visual Studio 2015\Projects\comicsProject_v2\comics.PL.WebApp\bin\System.Web.WebPages.Deployment.xml
+C:\Users\A\Documents\Visual Studio 2015\Projects\comicsProject_v2\comics.PL.WebApp\bin\System.Web.WebPages.Razor.xml
+C:\Users\A\Documents\Visual Studio 2015\Projects\comicsProject_v2\comics.PL.WebApp\bin\comics.DAL.Contract.pdb
+C:\Users\A\Documents\Visual Studio 2015\Projects\comicsProject_v2\comics.PL.WebApp\bin\comics.DAL.SQL.pdb
+C:\Users\A\Documents\Visual Studio 2015\Projects\comicsProject_v2\comics.PL.WebApp\obj\Debug\comics.PL.WebApp.csprojResolveAssemblyReference.cache
+C:\Users\A\Documents\Visual Studio 2015\Projects\comicsProject_v2\comics.PL.WebApp\obj\Debug\comics.PL.WebApp.dll
+C:\Users\A\Documents\Visual Studio 2015\Projects\comicsProject_v2\comics.PL.WebApp\obj\Debug\comics.PL.WebApp.pdb
+C:\Users\A\Documents\Visual Studio 2015\Projects\comicsProject_v2\comics.PL.WebApp\bin\Newtonsoft.Json.dll
+C:\Users\A\Documents\Visual Studio 2015\Projects\comicsProject_v2\comics.PL.WebApp\bin\Newtonsoft.Json.xml
+D:\My documents\visual studio 2015\Projects\comicsProject_v2\comics.PL.WebApp\bin\Newtonsoft.Json.dll
+D:\My documents\visual studio 2015\Projects\comicsProject_v2\comics.PL.WebApp\bin\Newtonsoft.Json.xml
+D:\My documents\Visual Studio 2015\Projects\comicsProject_v3\comics.PL.WebApp\bin\roslyn\csc.exe
+D:\My documents\Visual Studio 2015\Projects\comicsProject_v3\comics.PL.WebApp\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\My documents\Visual Studio 2015\Projects\comicsProject_v3\comics.PL.WebApp\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\My documents\Visual Studio 2015\Projects\comicsProject_v3\comics.PL.WebApp\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\My documents\Visual Studio 2015\Projects\comicsProject_v3\comics.PL.WebApp\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\My documents\Visual Studio 2015\Projects\comicsProject_v3\comics.PL.WebApp\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\My documents\Visual Studio 2015\Projects\comicsProject_v3\comics.PL.WebApp\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\My documents\Visual Studio 2015\Projects\comicsProject_v3\comics.PL.WebApp\bin\roslyn\System.Collections.Immutable.dll
+D:\My documents\Visual Studio 2015\Projects\comicsProject_v3\comics.PL.WebApp\bin\roslyn\System.Reflection.Metadata.dll
+D:\My documents\Visual Studio 2015\Projects\comicsProject_v3\comics.PL.WebApp\bin\roslyn\vbc.exe
+D:\My documents\Visual Studio 2015\Projects\comicsProject_v3\comics.PL.WebApp\bin\roslyn\VBCSCompiler.exe
+D:\My documents\Visual Studio 2015\Projects\comicsProject_v3\comics.PL.WebApp\bin\roslyn\VBCSCompiler.exe.config
+D:\My documents\Visual Studio 2015\Projects\comicsProject_v3\comics.PL.WebApp\bin\comics.PL.WebApp.dll.config
+D:\My documents\Visual Studio 2015\Projects\comicsProject_v3\comics.PL.WebApp\bin\comics.PL.WebApp.dll
+D:\My documents\Visual Studio 2015\Projects\comicsProject_v3\comics.PL.WebApp\bin\comics.PL.WebApp.pdb
+D:\My documents\Visual Studio 2015\Projects\comicsProject_v3\comics.PL.WebApp\bin\comics.BLL.Contract.dll
+D:\My documents\Visual Studio 2015\Projects\comicsProject_v3\comics.PL.WebApp\bin\comics.BLL.Core.dll
+D:\My documents\Visual Studio 2015\Projects\comicsProject_v3\comics.PL.WebApp\bin\comics.Entities.dll
+D:\My documents\Visual Studio 2015\Projects\comicsProject_v3\comics.PL.WebApp\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\My documents\Visual Studio 2015\Projects\comicsProject_v3\comics.PL.WebApp\bin\Microsoft.Web.Infrastructure.dll
+D:\My documents\Visual Studio 2015\Projects\comicsProject_v3\comics.PL.WebApp\bin\Newtonsoft.Json.dll
+D:\My documents\Visual Studio 2015\Projects\comicsProject_v3\comics.PL.WebApp\bin\System.Web.Helpers.dll
+D:\My documents\Visual Studio 2015\Projects\comicsProject_v3\comics.PL.WebApp\bin\System.Web.Razor.dll
+D:\My documents\Visual Studio 2015\Projects\comicsProject_v3\comics.PL.WebApp\bin\System.Web.WebPages.Deployment.dll
+D:\My documents\Visual Studio 2015\Projects\comicsProject_v3\comics.PL.WebApp\bin\System.Web.WebPages.dll
+D:\My documents\Visual Studio 2015\Projects\comicsProject_v3\comics.PL.WebApp\bin\System.Web.WebPages.Razor.dll
+D:\My documents\Visual Studio 2015\Projects\comicsProject_v3\comics.PL.WebApp\bin\comics.DAL.Contract.dll
+D:\My documents\Visual Studio 2015\Projects\comicsProject_v3\comics.PL.WebApp\bin\comics.DAL.SQL.dll
+D:\My documents\Visual Studio 2015\Projects\comicsProject_v3\comics.PL.WebApp\bin\comics.BLL.Contract.pdb
+D:\My documents\Visual Studio 2015\Projects\comicsProject_v3\comics.PL.WebApp\bin\comics.BLL.Core.pdb
+D:\My documents\Visual Studio 2015\Projects\comicsProject_v3\comics.PL.WebApp\bin\comics.Entities.pdb
+D:\My documents\Visual Studio 2015\Projects\comicsProject_v3\comics.PL.WebApp\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\My documents\Visual Studio 2015\Projects\comicsProject_v3\comics.PL.WebApp\bin\Newtonsoft.Json.xml
+D:\My documents\Visual Studio 2015\Projects\comicsProject_v3\comics.PL.WebApp\bin\System.Web.Helpers.xml
+D:\My documents\Visual Studio 2015\Projects\comicsProject_v3\comics.PL.WebApp\bin\System.Web.Razor.xml
+D:\My documents\Visual Studio 2015\Projects\comicsProject_v3\comics.PL.WebApp\bin\System.Web.WebPages.xml
+D:\My documents\Visual Studio 2015\Projects\comicsProject_v3\comics.PL.WebApp\bin\System.Web.WebPages.Deployment.xml
+D:\My documents\Visual Studio 2015\Projects\comicsProject_v3\comics.PL.WebApp\bin\System.Web.WebPages.Razor.xml
+D:\My documents\Visual Studio 2015\Projects\comicsProject_v3\comics.PL.WebApp\bin\comics.DAL.Contract.pdb
+D:\My documents\Visual Studio 2015\Projects\comicsProject_v3\comics.PL.WebApp\bin\comics.DAL.SQL.pdb
+D:\My documents\Visual Studio 2015\Projects\comicsProject_v3\comics.PL.WebApp\obj\Debug\comics.PL.WebApp.csprojResolveAssemblyReference.cache
+D:\My documents\Visual Studio 2015\Projects\comicsProject_v3\comics.PL.WebApp\obj\Debug\comics.PL.WebApp.dll
+D:\My documents\Visual Studio 2015\Projects\comicsProject_v3\comics.PL.WebApp\obj\Debug\comics.PL.WebApp.pdb
+C:\Users\A\Source\Repos\comicsProject_v3\comics.PL.WebApp\bin\roslyn\csc.exe
+C:\Users\A\Source\Repos\comicsProject_v3\comics.PL.WebApp\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\A\Source\Repos\comicsProject_v3\comics.PL.WebApp\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\A\Source\Repos\comicsProject_v3\comics.PL.WebApp\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\A\Source\Repos\comicsProject_v3\comics.PL.WebApp\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\A\Source\Repos\comicsProject_v3\comics.PL.WebApp\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\A\Source\Repos\comicsProject_v3\comics.PL.WebApp\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\A\Source\Repos\comicsProject_v3\comics.PL.WebApp\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\A\Source\Repos\comicsProject_v3\comics.PL.WebApp\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\A\Source\Repos\comicsProject_v3\comics.PL.WebApp\bin\roslyn\vbc.exe
+C:\Users\A\Source\Repos\comicsProject_v3\comics.PL.WebApp\bin\roslyn\VBCSCompiler.exe
+C:\Users\A\Source\Repos\comicsProject_v3\comics.PL.WebApp\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\A\Source\Repos\comicsProject_v3\comics.PL.WebApp\bin\comics.PL.WebApp.dll.config
+C:\Users\A\Source\Repos\comicsProject_v3\comics.PL.WebApp\bin\comics.PL.WebApp.dll
+C:\Users\A\Source\Repos\comicsProject_v3\comics.PL.WebApp\bin\comics.PL.WebApp.pdb
+C:\Users\A\Source\Repos\comicsProject_v3\comics.PL.WebApp\bin\comics.BLL.Contract.dll
+C:\Users\A\Source\Repos\comicsProject_v3\comics.PL.WebApp\bin\comics.BLL.Core.dll
+C:\Users\A\Source\Repos\comicsProject_v3\comics.PL.WebApp\bin\comics.Entities.dll
+C:\Users\A\Source\Repos\comicsProject_v3\comics.PL.WebApp\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\A\Source\Repos\comicsProject_v3\comics.PL.WebApp\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\A\Source\Repos\comicsProject_v3\comics.PL.WebApp\bin\Newtonsoft.Json.dll
+C:\Users\A\Source\Repos\comicsProject_v3\comics.PL.WebApp\bin\System.Web.Helpers.dll
+C:\Users\A\Source\Repos\comicsProject_v3\comics.PL.WebApp\bin\System.Web.Razor.dll
+C:\Users\A\Source\Repos\comicsProject_v3\comics.PL.WebApp\bin\System.Web.WebPages.Deployment.dll
+C:\Users\A\Source\Repos\comicsProject_v3\comics.PL.WebApp\bin\System.Web.WebPages.dll
+C:\Users\A\Source\Repos\comicsProject_v3\comics.PL.WebApp\bin\System.Web.WebPages.Razor.dll
+C:\Users\A\Source\Repos\comicsProject_v3\comics.PL.WebApp\bin\comics.DAL.Contract.dll
+C:\Users\A\Source\Repos\comicsProject_v3\comics.PL.WebApp\bin\comics.DAL.SQL.dll
+C:\Users\A\Source\Repos\comicsProject_v3\comics.PL.WebApp\bin\comics.BLL.Contract.pdb
+C:\Users\A\Source\Repos\comicsProject_v3\comics.PL.WebApp\bin\comics.BLL.Core.pdb
+C:\Users\A\Source\Repos\comicsProject_v3\comics.PL.WebApp\bin\comics.Entities.pdb
+C:\Users\A\Source\Repos\comicsProject_v3\comics.PL.WebApp\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\A\Source\Repos\comicsProject_v3\comics.PL.WebApp\bin\Newtonsoft.Json.xml
+C:\Users\A\Source\Repos\comicsProject_v3\comics.PL.WebApp\bin\System.Web.Helpers.xml
+C:\Users\A\Source\Repos\comicsProject_v3\comics.PL.WebApp\bin\System.Web.Razor.xml
+C:\Users\A\Source\Repos\comicsProject_v3\comics.PL.WebApp\bin\System.Web.WebPages.xml
+C:\Users\A\Source\Repos\comicsProject_v3\comics.PL.WebApp\bin\System.Web.WebPages.Deployment.xml
+C:\Users\A\Source\Repos\comicsProject_v3\comics.PL.WebApp\bin\System.Web.WebPages.Razor.xml
+C:\Users\A\Source\Repos\comicsProject_v3\comics.PL.WebApp\bin\comics.DAL.Contract.pdb
+C:\Users\A\Source\Repos\comicsProject_v3\comics.PL.WebApp\bin\comics.DAL.SQL.pdb
+C:\Users\A\Source\Repos\comicsProject_v3\comics.PL.WebApp\obj\Debug\comics.PL.WebApp.csprojResolveAssemblyReference.cache
+C:\Users\A\Source\Repos\comicsProject_v3\comics.PL.WebApp\obj\Debug\comics.PL.WebApp.dll
+C:\Users\A\Source\Repos\comicsProject_v3\comics.PL.WebApp\obj\Debug\comics.PL.WebApp.pdb

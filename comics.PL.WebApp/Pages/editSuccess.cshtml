@@ -1,0 +1,104 @@
+﻿@using System
+@using comics.PL.WebApp
+@using comics.Entities;
+@{
+    Layout = "~/_Layout.cshtml";
+
+    PageData["Title"] = "edit success discription";
+
+    Success success = null;
+
+    string errorMessage = null;
+
+    //start block of Authenticated
+    if (User.Identity.IsAuthenticated & User.IsInRole("admin"))
+    {
+        //
+
+        if (!IsPost)
+        {
+            success = LogicProvider.GetSuccessLogicForWeb.GetById(Guid.Parse(Request["successId"]));
+        }
+
+        if (IsPost)
+        {
+            var newDiscription = Request["Discription"];
+            success = LogicProvider.GetSuccessLogicForWeb.GetById(Guid.Parse(Request["successId"]));
+
+            if (LogicProvider.GetSuccessLogicForWeb.EditSuccessDiscription(success.Id, newDiscription))
+            {
+                Response.Redirect("~/Pages/showSuccess.cshtml");
+            }
+            else
+            {
+                errorMessage = "you can't create success with empty discription";
+            }
+        }
+
+        //
+    }
+    else
+    {
+        Response.Redirect("~/Pages/addUser.cshtml?errorCode=noRole");
+    }
+    //end block of Authenticated
+
+}
+
+<div class="container">
+
+    <div class="panel panel-primary">
+
+        @RenderPage("~/_NavigationPartial.cshtml")
+
+        <div class="panel-heading">
+            <span>edit success discription</span>
+        </div>
+
+        <div class="panel-body">
+
+            <div class="container-fluid row">
+                <div class="col-sm-8 col-sm-offset-2">
+
+                    <div class="aboutSuccess">
+                        <p class="list-group-item-text">curator: @LogicProvider.GetUserLogicForWeb.GetUserById(success.CuratorId).Name</p>
+                        <p class="list-group-item-text"><i>@success.CreationTime</i></p>
+                        <p class="list-group-item-text">status: <b>@success.Status</b></p>
+
+                        @if (success.PerformerId != default(Guid))
+                        {
+                            <p class="list-group-item-text">performer: @LogicProvider.GetUserLogicForWeb.GetUserById(success.PerformerId).Name</p>
+                        }
+
+                    </div>
+
+                    <form role="form" method="post" action="">
+                        <div class="form-group">
+                            <label for="Discription">discription:</label>
+                            <textarea id="Discription" style="resize:vertical" type="text" name="Discription" class="form-control" rows="8">@success.SuccessDiscription</textarea>
+                            <input type="hidden" name="successId" value="@success.Id">
+                        </div>
+
+                        @if (errorMessage != null)
+                        {
+                            <div class="alert alert-danger">@errorMessage</div>
+                        }
+
+                        <button type="submit" class="btn btn-primary">Edit Success</button>
+                    </form>
+                    <br />
+                        <form method="post" action="~/Pages/delSuccess.cshtml" style="position:absolute;right:8px;top:0px;">
+                            <input type="hidden" name="successId" value="@success.Id" />
+                            <button type="submit" class="btn btn-danger">Delete</button>
+                        </form>
+
+                </div>
+            </div>
+
+        </div>
+
+        <div class="panel-footer">
+
+        </div>
+    </div>
+</div>
