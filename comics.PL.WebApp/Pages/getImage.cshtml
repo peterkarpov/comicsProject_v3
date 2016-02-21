@@ -12,13 +12,19 @@
 
         int number = int.Parse(Request["number"]);
 
+
+        //if (number > LogicProvider.GetPageLogicForWeb.GetCountPagesOnIssue(issueId))
+        //{
+        //    number = 1;
+        //}
+
         comics.Entities.Page page = LogicProvider.GetPageLogicForWeb.GetOnePagesOnIssue(issueId, number);
 
         imgbyte = page.img;
         mime = page.MIME;
 
         Response.WriteBinary(imgbyte, mime);
-        
+
     }
-    
+
 }

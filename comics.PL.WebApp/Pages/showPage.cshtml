@@ -16,6 +16,7 @@
 
     Issue issueForTitle = null;
 
+
     if ((Request["issueId"] != null) & (Request["number"] != null))
     {
 
@@ -31,7 +32,15 @@
         }
 
     }
+
     int issuePageCount = LogicProvider.GetPageLogicForWeb.GetCountPagesOnIssue(issueId);
+
+    if (number > issuePageCount)
+    {
+        number = 1;
+    }
+
+
 }
 
 <div class="container">

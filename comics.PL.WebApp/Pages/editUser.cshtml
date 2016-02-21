@@ -173,88 +173,12 @@
                 }
             </ul>
             }
-
-
-            @*<div class="panel-group" id="accordion">
-                @foreach (var comment in LogicProvider.GetCommentLogicForWeb.GetAllForUser(user.Id).ToList())
-                {
-
-                    <div class="panel panel-default">
-                        <div class="panel-heading">
-                            <h4 class="panel-title">
-                                <a data-toggle="collapse" data-parent="#accordion" href="#@comment.Id" style="outline:none">
-                                    <div><i>@(String.Format("{0:F}", comment.CreationTime))</i></div>
-                                </a>
-                            </h4>
-                        </div>
-                        <div id="@comment.Id" class="panel-collapse collapse">
-                            <div class="panel-body">
-                                <span>@comment.Text</span>
-
-
-                                @if (LogicProvider.GetUserLogicForWeb.ExistUser(comment.AuthorID))
-                                {
-                                    <div>
-                                        @if (LogicProvider.GetIssueLogicForWeb.ExistIssue(comment.IssueID))
-                                        {
-                                            Issue issue = LogicProvider.GetIssueLogicForWeb.GetIssueById(comment.IssueID);
-                                            <text>
-                                                for
-                                                <a href="~/Pages/showOneIssue.cshtml?issueId=@issue.Id">
-                                                    @issue.Series -
-                                                    @issue.Volume -
-                                                    @issue.IssueName
-                                                </a>
-                                            </text>
-                                        }
-                                        else
-                                        {
-                                            <text> deleted issue</text>
-                                        }
-                                    </div>
-
-                                }
-                                else
-                                {
-                                    <div><b>User has been deleted own profile...</b></div>
-                                }
-
-                            </div>
-                        </div>
-                    </div>
-                }
-            </div>*@
+            
 
             @if (LogicProvider.GetSuccessLogicForWeb.GetAllSuccessOnCurator(user.Id).ToList().Count != 0)
             {
             <h4>Success of @user.Name, where his been Curator: </h4>
-
-            @*<ul class="list-group">
-
-                    @foreach (var success in LogicProvider.GetSuccessLogicForWeb.GetAllSuccessOnCurator(user.Id).ToList())
-                    {
-                        <li class="list-group-item
-                            @if (success.Status == "checked") { <text>list-group-item-success</text> }
-                            @if (success.Status == "inProgress") { <text>list-group-item-info</text> }
-                            ">
-
-                            <div class="aboutSuccess">
-                                <p class="list-group-item-text">curator: @LogicProvider.GetUserLogicForWeb.GetUserById(success.CuratorId).Name</p>
-                                <p class="list-group-item-text"><i>@success.CreationTime</i></p>
-                                <p class="list-group-item-heading">@success.SuccessDiscription</p>
-                                <p class="list-group-item-text">status: <b>@success.Status</b></p>
-
-                                @if (success.PerformerId != default(Guid))
-                                {
-                                    <p class="list-group-item-text">performer: @LogicProvider.GetUserLogicForWeb.GetUserById(success.PerformerId).Name</p>
-                                }
-
-                            </div>
-
-                        </li>
-                    }
-
-                </ul>*@
+            
 
             <div class="panel-group" id="accordion">
 
@@ -294,36 +218,7 @@
             @if (LogicProvider.GetSuccessLogicForWeb.GetAllSuccessOnPerformer(user.Id).ToList().Count != 0)
             {
             <h4>Success of @user.Name, where his been Performer: </h4>
-
-            @*<ul class="list-group">
-
-                    @foreach (var success in LogicProvider.GetSuccessLogicForWeb.GetAllSuccessOnPerformer(user.Id).ToList())
-                    {
-                        <li class="list-group-item
-                            @if (success.Status == "checked") { <text>list-group-item-success</text> }
-                            @if (success.Status == "inProgress") { <text>list-group-item-info</text> }
-                            ">
-
-                            <div class="aboutSuccess">
-                                <p class="list-group-item-text">curator: @LogicProvider.GetUserLogicForWeb.GetUserById(success.CuratorId).Name</p>
-                                <p class="list-group-item-text"><i>@success.CreationTime</i></p>
-                                <p class="list-group-item-heading">@success.SuccessDiscription</p>
-                                <p class="list-group-item-text">status: <b>@success.Status</b></p>
-
-                                @if (success.PerformerId != default(Guid))
-                                {
-                                    <p class="list-group-item-text">performer: @LogicProvider.GetUserLogicForWeb.GetUserById(success.PerformerId).Name</p>
-                                }
-
-                            </div>
-
-                        </li>
-                    }
-
-                </ul>*@
-
-
-
+            
             <div class="panel-group" id="accordion">
                 @foreach (var success in LogicProvider.GetSuccessLogicForWeb.GetAllSuccessOnPerformer(user.Id).ToList())
                 {
@@ -369,11 +264,3 @@
 <script src="js/bootstrap-collapse.js"></script>
 
 <script src="~/Scripts/forEmail.js"></script>
-
-@*<script>
-
-    $.getScript('~/Scripts/forEmail.js', function () {
-        alert('script loaded');
-    });
-
-</script>*@
