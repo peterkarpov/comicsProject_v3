@@ -25,3 +25,12 @@ D:\My documents\Visual Studio 2015\Projects\comicsProject_v3\comics.DAL.Contract
 D:\My documents\Visual Studio 2015\Projects\comicsProject_v3\comics.DAL.Contract\obj\Debug\comics.DAL.Contract.csprojResolveAssemblyReference.cache
 D:\My documents\Visual Studio 2015\Projects\comicsProject_v3\comics.DAL.Contract\obj\Debug\comics.DAL.Contract.dll
 D:\My documents\Visual Studio 2015\Projects\comicsProject_v3\comics.DAL.Contract\obj\Debug\comics.DAL.Contract.pdb
+C:\Users\A\Source\Repos\comicsProject_v3\comics.DAL.Contract\bin\Debug\comics.DAL.Contract.dll
+C:\Users\A\Source\Repos\comicsProject_v3\comics.DAL.Contract\bin\Debug\comics.DAL.Contract.pdb
+C:\Users\A\Source\Repos\comicsProject_v3\comics.DAL.Contract\bin\Debug\comics.Entities.dll
+C:\Users\A\Source\Repos\comicsProject_v3\comics.DAL.Contract\bin\Debug\Newtonsoft.Json.dll
+C:\Users\A\Source\Repos\comicsProject_v3\comics.DAL.Contract\bin\Debug\comics.Entities.pdb
+C:\Users\A\Source\Repos\comicsProject_v3\comics.DAL.Contract\bin\Debug\Newtonsoft.Json.xml
+C:\Users\A\Source\Repos\comicsProject_v3\comics.DAL.Contract\obj\Debug\comics.DAL.Contract.csprojResolveAssemblyReference.cache
+C:\Users\A\Source\Repos\comicsProject_v3\comics.DAL.Contract\obj\Debug\comics.DAL.Contract.dll
+C:\Users\A\Source\Repos\comicsProject_v3\comics.DAL.Contract\obj\Debug\comics.DAL.Contract.pdb

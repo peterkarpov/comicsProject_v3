@@ -118,6 +118,7 @@
     <Content Include="Pages\showSuccess.cshtml" />
     <Content Include="Pages\setPerformer.cshtml" />
     <Content Include="Pages\showUsers.cshtml" />
+    <None Include="Properties\PublishProfiles\comicsProject.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

@@ -43,3 +43,18 @@ D:\My documents\Visual Studio 2015\Projects\comicsProject_v3\comics.BLL.Core\bin
 D:\My documents\Visual Studio 2015\Projects\comicsProject_v3\comics.BLL.Core\obj\Debug\comics.BLL.Core.csprojResolveAssemblyReference.cache
 D:\My documents\Visual Studio 2015\Projects\comicsProject_v3\comics.BLL.Core\obj\Debug\comics.BLL.Core.dll
 D:\My documents\Visual Studio 2015\Projects\comicsProject_v3\comics.BLL.Core\obj\Debug\comics.BLL.Core.pdb
+C:\Users\A\Source\Repos\comicsProject_v3\comics.BLL.Core\bin\Debug\comics.BLL.Core.dll
+C:\Users\A\Source\Repos\comicsProject_v3\comics.BLL.Core\bin\Debug\comics.BLL.Core.pdb
+C:\Users\A\Source\Repos\comicsProject_v3\comics.BLL.Core\bin\Debug\comics.BLL.Contract.dll
+C:\Users\A\Source\Repos\comicsProject_v3\comics.BLL.Core\bin\Debug\comics.DAL.Contract.dll
+C:\Users\A\Source\Repos\comicsProject_v3\comics.BLL.Core\bin\Debug\comics.DAL.SQL.dll
+C:\Users\A\Source\Repos\comicsProject_v3\comics.BLL.Core\bin\Debug\comics.Entities.dll
+C:\Users\A\Source\Repos\comicsProject_v3\comics.BLL.Core\bin\Debug\Newtonsoft.Json.dll
+C:\Users\A\Source\Repos\comicsProject_v3\comics.BLL.Core\bin\Debug\comics.BLL.Contract.pdb
+C:\Users\A\Source\Repos\comicsProject_v3\comics.BLL.Core\bin\Debug\comics.DAL.Contract.pdb
+C:\Users\A\Source\Repos\comicsProject_v3\comics.BLL.Core\bin\Debug\comics.DAL.SQL.pdb
+C:\Users\A\Source\Repos\comicsProject_v3\comics.BLL.Core\bin\Debug\comics.Entities.pdb
+C:\Users\A\Source\Repos\comicsProject_v3\comics.BLL.Core\bin\Debug\Newtonsoft.Json.xml
+C:\Users\A\Source\Repos\comicsProject_v3\comics.BLL.Core\obj\Debug\comics.BLL.Core.csprojResolveAssemblyReference.cache
+C:\Users\A\Source\Repos\comicsProject_v3\comics.BLL.Core\obj\Debug\comics.BLL.Core.dll
+C:\Users\A\Source\Repos\comicsProject_v3\comics.BLL.Core\obj\Debug\comics.BLL.Core.pdb
